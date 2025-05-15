@@ -14,3 +14,5 @@ This repository consists of project files related to development of the Personal
 - [Testing](https://github.com/Ense-375/Ense-375/blob/main/TESTING.md)
 - [Report](https://github.com/Ense-375/Ense-375/blob/main/Report.md)
 - [Presentation]()
+
+### Teamwork
