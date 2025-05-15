@@ -15,5 +15,5 @@ This repository consists of project files related to development of the Personal
 - [Report](https://github.com/Ense-375/Ense-375/blob/main/Report.md)
 - [Presentation]()
 
-#### Teamwork
-[TeamWork](https://github.com/Ense-375/Ense-375/tree/main/Documents/Teamwork)
+#### Teamwork & Meetings
+[TeamWork/ Meetings](https://github.com/Ense-375/Ense-375/tree/main/Documents/Teamwork)
