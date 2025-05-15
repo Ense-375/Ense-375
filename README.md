@@ -3,7 +3,7 @@
 ## Group Memebers
 1. Tolani Oke-Steve
 2. 
-3. 
+3. Grant Zhao
 
 ## Personal Budget Tracker
 This application provides set of tools to that help users categorize their expenses and gain valuable insight to thier spending habits. With the help of intuitive vizualtion tools such as pie charts and bar graphs, users can analyze their spending habits and make better decisions to improve their financial health. Designed with an emphasis on user-frendliness, simplicity and accuracy, this tool ensures that financial management is avaliable to everyone, ensuring that budgeting is effortless.
