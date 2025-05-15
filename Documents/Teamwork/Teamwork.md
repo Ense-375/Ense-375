@@ -3,4 +3,5 @@
 | Purpose | To confirm project Idea |
 | Attendees | Tolani,  Dimitri, Garnt  |
 |Time| 12.20 - 12.47|
+|Date| 14-05-2025|
 |Location| ED474|
