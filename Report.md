@@ -52,9 +52,7 @@
 
 ## Introduction
 
-*Give a brief description of the design and a summary of the relevant background information related to the topic. Provide a rationale about what is needed and why.*
 
-*Give the reader an overview of what is in the next sections.*
 
 ---
 
@@ -81,13 +79,13 @@ The system emphasizes **simplicity**, **clarity**, and **accuracy**—making it 
 ### Design Requirements
 
 #### Functions
-*(List actions the system should perform. For example: “Track expenses,” “Generate reports.”)*
+
 
 #### Objectives
-*(List adjectives describing what the system should be. For example: “Reliable,” “Easy to use.”)*
+
 
 #### Constraints
-*(List binary conditions the design must meet. For example: “Must work offline,” “Must run on Windows 10.”)*
+
 
 ---
 
@@ -95,27 +93,27 @@ The system emphasizes **simplicity**, **clarity**, and **accuracy**—making it 
 
 ### Solution 1
 
-*Description and reasons for not selecting this one.*
+
 
 ### Solution 2
 
-*Improved version with some limitations.*
+
 
 ### Final Solution
 
-*Chosen solution with all features and constraint satisfaction.*
+
 
 #### Components
 
-- *(Describe major software/hardware components used)*
+
 
 #### Environmental, Societal, Safety, and Economic Considerations
 
-- *(Address these topics in terms of your solution’s impact and design)*
+
 
 #### Limitations
 
-- *(Clearly list known issues, limitations, or trade-offs)*
+
 
 ---
 
@@ -123,14 +121,14 @@ The system emphasizes **simplicity**, **clarity**, and **accuracy**—making it 
 
 ### Meeting 1
 
-**Time:** Month Date, Year, Start–End  
-**Agenda:** Distribution of Project Tasks
+**Time:** May 11, 2025, 12:20pm - 12:50pm
+**Agenda:** Decide on the project idea
 
 | Team Member      | Previous Task | Completion State | Next Task |
 |------------------|---------------|------------------|-----------|
-| Team member 1    | N/A           | N/A              | Task 1    |
-| Team member 2    | N/A           | N/A              | Task 2    |
-| Team member 3    | N/A           | N/A              | Task 3    |
+| Tolani    | Prepare project ideas           | Completed              | Write Problem Definition    |
+| Dmytro    | Prepare project ideas           | Completed              | Setup Github    |
+| Grant     | Prepare project ideas           | Completed              | Write Introduction    |
 
 ### Meeting 2
 
@@ -145,35 +143,34 @@ The system emphasizes **simplicity**, **clarity**, and **accuracy**—making it 
 
 ### Meeting 3
 
-*Add similar structure as above.*
+
 
 ### Meeting 4
 
-*Add similar structure as above.*
+
 
 ---
 
 ## Project Management
 
-*Include your Gantt chart and discussion of slack time and critical path.*
+
 
 ---
 
 ## Conclusion and Future Work
 
-- Summary of achievements  
-- Limitations and recommendations for future design improvements
+
 
 ---
 
 ## References
 
-*Use IEEE format for citations.*
+
 
 ---
 
 ## Appendix
 
-*Add additional diagrams, charts, or supplementary material here.*
+
 
 ---
