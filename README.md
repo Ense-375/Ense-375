@@ -2,7 +2,7 @@
 
 ## Group Memebers
 1. Tolani Oke-Steve
-2. 
+2. Dmytro Stepaniuk
 3. Grant Zhao
 
 ## Personal Budget Tracker
