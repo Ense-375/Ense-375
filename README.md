@@ -10,7 +10,7 @@ This application provides a set of tools to that help users categorize their exp
 
 ## Content
 This repository consists of project files related to development of the Personal Budget Tracker
-- [Problem Definition](https://github.com/Ense-375/Ense-375/blob/main/Report.md)
+- [Problem Definition](https://github.com/Ense-375/Ense-375/blob/main/Report.md#problem-definition)
 - [Testing](https://github.com/Ense-375/Ense-375/blob/main/TESTING.md)
 - [Report](https://github.com/Ense-375/Ense-375/blob/main/Report.md)
 - [Presentation]()
