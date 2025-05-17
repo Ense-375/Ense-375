@@ -51,7 +51,7 @@
 ---
 
 ## Introduction
-
+The Personal Budget Tracker is a software application made to support personal financial management. Its primary goal is to provide users with helpful and clear summaries of their income and spending. This information can be accessed easily, encouraging careful budgeting and financial decisions. This report presents a comprehensive overview of the design and development of Budget Tracker, outlining the planning going into the project, the implementation for that planning and the testing methods to evaluate the program.
 
 
 ---
