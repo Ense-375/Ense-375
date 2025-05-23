@@ -79,10 +79,25 @@ The system emphasizes **simplicity**, **clarity**, and **accuracy**—making it 
 ### Design Requirements
 
 #### Functions
-
+The functions of the personal budget tracker include:
+1. Track Spending: Enable users to input and visualize their weekly and monthly spending
+2. Track Income:  Allow users to input and update their monthly income 
+3. Set budget Goals: This budget tracker will give users the opportunity to set spending limits and saving goals on specific categories
+4. Generate visual summaries: Create pie charts, bar graphs and other visualization tools to help users illustrate their financial health
+5. Display budget Overview: Show users a clear overview of their financial behaviour.
+6. Protect user information: Ensures users data are protected through encryption and authentication.
+7. Categorize spending: Sort expenses and income into custom categories based on type.
 
 #### Objectives
-
+The objectives of the personal budget tracker include:
+1. Secure: The application should protect user data and privacy through strong authentication
+2. Reliable: The application should consistently perform accurate calculations and store user data securely
+3. Efficient: With the personal budget tracker users should be able to manage their finances with minimal effort
+4. Easy to use: The application should be intuitive and easy to use for users
+5. Accurate: The application should ensure correct recording and analysis of spending and income
+6. Responsive: Quick reaction to user inputs and updating visuals quickly are a priority for this application.
+7. Flexible: This application should allow users to customize their financial goals to suit their specific needs.
+8. Informative: This application should provide meaningful insights to users' financial behaviour.
 
 #### Constraints
 
