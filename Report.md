@@ -191,6 +191,16 @@ To meet ENSE 375 guidelines, the project must address the following design const
 
 ### Meeting 2
 
+**Time:** May 21, 2025, 12:20pm - 12:50pm  
+**Agenda:** Complete the Design Requirements part of the report
+
+| Team Member      | Previous Task | Completion State | Next Task     |
+|------------------|---------------|------------------|---------------|
+| Tolani    | Write Problem Definition        | Completed              | Write Functional and Non-functional requirements|
+| Dmytro    | Setup Github       | Completed              | Write Constraints for the project        |
+| Grant    | Write Introduction        | Completed             | Write Objectives for the project        |
+
+### Meeting 3
 **Time:** Month Date, Year, Start–End  
 **Agenda:** Review of Individual Progress
 
@@ -200,12 +210,16 @@ To meet ENSE 375 guidelines, the project must address the following design const
 | Team member 2    | Task 2        | 50%              | Task 2        |
 | Team member 3    | Task 3        | 100%             | Task 6        |
 
-### Meeting 3
-
-
 
 ### Meeting 4
+**Time:** Month Date, Year, Start–End  
+**Agenda:** Review of Individual Progress
 
+| Team Member      | Previous Task | Completion State | Next Task     |
+|------------------|---------------|------------------|---------------|
+| Team member 1    | Task 1        | 80%              | Task 1, Task 5|
+| Team member 2    | Task 2        | 50%              | Task 2        |
+| Team member 3    | Task 3        | 100%             | Task 6        |
 
 
 ---
