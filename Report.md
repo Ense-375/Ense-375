@@ -100,40 +100,51 @@ The objectives of the personal budget tracker include:
 8. Informative: This application should provide meaningful insights to users' financial behaviour.
 
 #### Constraints
-These constraints ensure the application meets user needs, remains within scope, and aligns with the ENSE 375 course requirements. They are categorized into project-specific constraints and course-mandated design constraints.
+The following constraints ensure that the Personal Budget Tracker application meets user needs, remains within project scope, and complies with the ENSE 375 course requirements.
 
-### Platform Constraints
-Must support commonly used platforms such as Windows, macOS, and modern web browsers. The application should not depend on any platform-specific installation.
+#### 1. Platform Compatibility
+- The application must support common platforms including Windows, macOS, and modern web browsers.
+- It must not require platform-specific installation or dependencies.
 
-### User Accessibility Constraints
-Must accommodate users with limited technical expertise. The user interface must be intuitive and easy to navigate for individuals with varying levels of technological literacy.
+#### 2. User Accessibility
+- The application must be usable by individuals with limited technical experience.
+- The interface should be intuitive and user-friendly.
 
-### Budgetary Constraints
-Must avoid the use of paid software or subscription-based services. All development tools, libraries, and frameworks must be free or open-source.
+#### 3. Budget Limitations
+- The project must avoid the use of paid software or subscription-based services.
+- All tools, libraries, and frameworks must be free or open-source.
 
-### Functional Constraints
-Must include only core budgeting functionality, including:
-- Manual entry of income and expenses  
-- Categorization of transactions  
-- Simple data visualization (e.g., pie charts and bar graphs)
+#### 4. Functional Scope
+The application:
+- Must support only core budgeting features:
+  - Manual entry of income and expenses
+  - Categorization of transactions
+  - Basic data visualizations (e.g., pie charts, bar graphs)
+- Must not include complex financial features such as:
+  - Automatic bank syncing
+  - Investment tracking
+  - Predictive analytics
 
-Must not include advanced financial features such as automatic bank syncing, investment tracking, or predictive analytics.
+To meet ENSE 375 guidelines, the project must address the following design constraints:
 
----
+#### 1. Economic Factors
+- The solution must be cost-effective for end users, with no hidden costs.
+- The software should assist users in managing finances without requiring premium features or external purchases.
 
-In addition to the above, the application must meet at least four design constraints required by the project guidelines:
+#### 2. Reliability
+- The application must ensure accurate calculations and stable performance.
+- It will be tested using:
+  - Unit testing
+  - Boundary value testing
+  - Equivalence class testing
 
-### Economic Factors
-The tool provides a low-cost solution for individuals to manage personal finances, with no hidden costs or reliance on commercial software.
+#### 3. Ethics
+- User data must be handled securely and respectfully.
+- No sensitive data should be stored or shared beyond its intended use.
 
-### Reliability
-The application must perform accurate calculations and maintain consistent functionality. It will undergo extensive testing, including unit testing, boundary value testing, and equivalence class testing.
-
-### Ethics
-All user data will be handled with respect for privacy and security. No sensitive information will be shared or stored externally.
-
-### Societal Impact
-By promoting personal financial literacy and responsibility, the tool contributes positively to individual financial health and broader societal well-being.
+#### 4. Societal Impact
+- The application promotes financial literacy and responsible spending.
+- It supports individual financial well-being, contributing positively to broader societal stability.
 
 ---
 
