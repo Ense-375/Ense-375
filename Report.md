@@ -100,7 +100,40 @@ The objectives of the personal budget tracker include:
 8. Informative: This application should provide meaningful insights to users' financial behaviour.
 
 #### Constraints
+These constraints ensure the application meets user needs, remains within scope, and aligns with the ENSE 375 course requirements. They are categorized into project-specific constraints and course-mandated design constraints.
 
+### Platform Constraints
+Must support commonly used platforms such as Windows, macOS, and modern web browsers. The application should not depend on any platform-specific installation.
+
+### User Accessibility Constraints
+Must accommodate users with limited technical expertise. The user interface must be intuitive and easy to navigate for individuals with varying levels of technological literacy.
+
+### Budgetary Constraints
+Must avoid the use of paid software or subscription-based services. All development tools, libraries, and frameworks must be free or open-source.
+
+### Functional Constraints
+Must include only core budgeting functionality, including:
+- Manual entry of income and expenses  
+- Categorization of transactions  
+- Simple data visualization (e.g., pie charts and bar graphs)
+
+Must not include advanced financial features such as automatic bank syncing, investment tracking, or predictive analytics.
+
+---
+
+In addition to the above, the application must meet at least four design constraints required by the project guidelines:
+
+### Economic Factors
+The tool provides a low-cost solution for individuals to manage personal finances, with no hidden costs or reliance on commercial software.
+
+### Reliability
+The application must perform accurate calculations and maintain consistent functionality. It will undergo extensive testing, including unit testing, boundary value testing, and equivalence class testing.
+
+### Ethics
+All user data will be handled with respect for privacy and security. No sensitive information will be shared or stored externally.
+
+### Societal Impact
+By promoting personal financial literacy and responsibility, the tool contributes positively to individual financial health and broader societal well-being.
 
 ---
 
