@@ -5,7 +5,7 @@
 package Prototype1.view;
 import java.util.*;
 
-import Prototype1.model.BudgetModel.FinancialEntry;
+import Prototype1.model.BudgetModel.FinancialEntry;;
 
 public class BudgetView {
     private Scanner scanner = new Scanner(System.in); // Scanner for user input

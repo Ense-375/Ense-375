@@ -2,7 +2,7 @@
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
 // Last edited by Dmytro on May 28, 2025
 
-package model;
+package Prototype1.model;
 
 import java.util.*;
 
