@@ -1,4 +1,4 @@
-package Prototype1;
+package Prototype1.controller;
 
 public class BudgetController {
     

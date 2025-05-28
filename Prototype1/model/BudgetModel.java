@@ -2,16 +2,16 @@
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
 // Last edited by Dmytro on May 28, 2025
 
-package Prototype1;
+package model;
 
 import java.util.*;
 
 public class BudgetModel {
 
-    public static class FinancialEntry{
-        public String type;
-        public String category;
-        public double amount;
+    public static class FinancialEntry {
+        public String type;   // "Income" or "Expense"
+        public String category; // Category of the entry (e.g., "Food", "Rent")
+        public double amount;   // Amount of the entry
 
         public FinancialEntry(String type, String category, double amount) {
             this.type = type;
@@ -19,6 +19,7 @@ public class BudgetModel {
             this.amount = amount;
         }
         @Override
+        // Returns a string representation of the financial entry
         public String toString() {
             return "Financial Entry{" +
                     "type = '" + type + '\'' +
@@ -29,16 +30,22 @@ public class BudgetModel {
     }
 
     private List<FinancialEntry> entries = new ArrayList<>();  // Stores all entries
+    // Set of valid categories for financial entries
     private static final Set<String> categories = Set.of("Food", "Rent", "Transport", "Entertainment", "Utilities", "Healthcare", "Other");
 
     // Adds new income or expense entry with validation
     public boolean addFinancialEntry(String type, String category, double amount) {
-        if (amount < 0 || (!type.equals("Income") && !type.equals("Expense"))) {
+        // Negative number is enetered or type is invalid
+        if (amount < 0 || (!type.equals("Income") && !type.equals("Expense"))) 
+        {
             return false; // Invalid entry
         }
-        if (!categories.contains(category)) {
+        // Check if the category is valid
+        if (!categories.contains(category)) 
+        {
             return false; // Invalid category
         }
+        // Add the entry to the list
         entries.add(new FinancialEntry(type, category, amount));
         return true; // Entry added successfully
     }
@@ -54,16 +61,24 @@ public class BudgetModel {
 
     // Retrieves all entries
     public List<FinancialEntry> getEntries() {
-        return new ArrayList<>(entries); // Return a copy to prevent external modification
+        return new ArrayList<>(entries); // Return a copy to prevent modification
     }
 
     // Calculate total income from entries
     public double getTotalIncome() {
+        // Filter entries by type "income" and sum their amounts
+        if (entries.isEmpty()) {
+            return 0.0; // Return 0 if no entries exist
+        }
         return entries.stream().filter(e -> e.type.equals("expense")).mapToDouble(e -> e.amount).sum();
     }
 
     // Calculate total expenses from entries
     public double getTotalExpenses() {
+        // Filter entries by type "expense" and sum their amounts
+        if (entries.isEmpty()) {
+            return 0.0; // Return 0 if there are no entries
+        }
         return entries.stream().filter(e -> e.type.equals("income")).mapToDouble(e -> e.amount).sum();
     }
 
