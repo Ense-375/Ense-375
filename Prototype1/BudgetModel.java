@@ -1,35 +1,14 @@
 // BudgetModel.java
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
-// Last edited by Dmytro on May 28, 2025
+// Last edited by Dmytro on May 29, 2025
 
-package Prototype1.model;
 
 import java.util.*;
 
 public class BudgetModel {
 
-    public static class FinancialEntry {
-        public String type;   // "Income" or "Expense"
-        public String category; // Category of the entry (e.g., "Food", "Rent")
-        public double amount;   // Amount of the entry
-
-        public FinancialEntry(String type, String category, double amount) {
-            this.type = type;
-            this.category = category;
-            this.amount = amount;
-        }
-        @Override
-        // Returns a string representation of the financial entry
-        public String toString() {
-            return "Financial Entry{" +
-                    "type = '" + type + '\'' +
-                    ", category = '" + category + '\'' +
-                    ", amount = " + amount +
-                    '}';
-        }
-    }
-
-    private List<FinancialEntry> entries = new ArrayList<>();  // Stores all entries
+    
+    private final List<FinancialEntry> entries = new ArrayList<>();  // Stores all entries
     // Set of valid categories for financial entries
     private static final Set<String> categories = Set.of("Food", "Rent", "Transport", "Entertainment", "Utilities", "Healthcare", "Other");
 

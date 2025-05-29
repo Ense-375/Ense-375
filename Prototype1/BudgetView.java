@@ -1,14 +1,13 @@
 // BudgetModel.java
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
-// Last edited by Dmytro on May 28, 2025
+// Last edited by Dmytro on May 29, 2025
 
-package Prototype1.view;
+
 import java.util.*;
 
-import Prototype1.model.BudgetModel.FinancialEntry;
 
 public class BudgetView {
-    private Scanner scanner = new Scanner(System.in); // Scanner for user input
+    private final Scanner scanner = new Scanner(System.in); // Scanner for user input
 
     // Displays the main menu and returns the user's choice
 

@@ -1,7 +1,7 @@
-package Prototype1;
-import Prototype1.model.BudgetModel;
-import Prototype1.view.BudgetView;
-import Prototype1.controller.BudgetController;
+// Main.java
+// This class serves as the entry point for the Personal Budget Tracker application.
+// It initializes the model, view, and controller, and starts the application loop.
+// Last edited by Dmytro on May 29, 2025
 
 public class Main {
     public static void main(String[] args) {

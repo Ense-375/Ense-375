@@ -1,15 +1,11 @@
 // BudgetModel.java
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
-// Last edited by Dmytro on May 28, 2025
+// Last edited by Dmytro on May 29, 2025
 
-package Prototype1.controller;
-import Prototype1.model.BudgetModel;
-import Prototype1.model.BudgetModel.FinancialEntry;
-import Prototype1.view.BudgetView;
 
 public class BudgetController {
-    private BudgetModel model;
-    private BudgetView view;
+    private final BudgetModel model;
+    private final BudgetView view;
 
     public BudgetController(BudgetModel model, BudgetView view) {
         this.model = model;
