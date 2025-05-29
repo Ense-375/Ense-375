@@ -4,6 +4,7 @@
 
 package Prototype1.controller;
 import Prototype1.model.BudgetModel;
+import Prototype1.model.BudgetModel.FinancialEntry;
 import Prototype1.view.BudgetView;
 
 public class BudgetController {
