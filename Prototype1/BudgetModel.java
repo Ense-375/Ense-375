@@ -51,7 +51,7 @@ public class BudgetModel {
         if (entries.isEmpty()) {
             return 0.0; // Return 0 if no entries exist
         }
-        return entries.stream().filter(e -> e.type.equals("expense")).mapToDouble(e -> e.amount).sum();
+        return entries.stream().filter(e -> e.type.equals("income")).mapToDouble(e -> e.amount).sum();
     }
 
     // Calculate total expenses from entries
@@ -60,7 +60,7 @@ public class BudgetModel {
         if (entries.isEmpty()) {
             return 0.0; // Return 0 if there are no entries
         }
-        return entries.stream().filter(e -> e.type.equals("income")).mapToDouble(e -> e.amount).sum();
+        return entries.stream().filter(e -> e.type.equals("expense")).mapToDouble(e -> e.amount).sum();
     }
 
     // Calculate net balance (income - expenses)
