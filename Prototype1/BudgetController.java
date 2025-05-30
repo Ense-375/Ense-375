@@ -2,6 +2,8 @@
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
 // Last edited by Dmytro on May 29, 2025
 
+import java.util.Set;
+
 
 public class BudgetController {
     private final BudgetModel model;
@@ -34,7 +36,15 @@ public class BudgetController {
     // Add an income or expense entry
     private void addEntry() {
         String type = view.promptString("Enter type (income/expense): ");
-        String category = view.promptString("Enter category: ");
+        type = type.toLowerCase(); // Normalize input to lowercase
+        String category = "income";
+        // Prompt for category only if type is expense
+        if ("expense".equals(type)) {
+            Set<String> validCategories = model.getCategories(); // Get valid categories from model
+            view.displayMessage("Here are the valid categories: " + validCategories);
+            category = view.promptString("Enter category: ");
+            category = category.toLowerCase(); // Normalize input to lowercase
+        }
         double amount = view.promptDouble("Enter amount: ");
         if (model.addFinancialEntry(type, category, amount)) {
             view.displayMessage("Entry added successfully.");

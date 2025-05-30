@@ -10,12 +10,13 @@ public class BudgetModel {
     
     private final List<FinancialEntry> entries = new ArrayList<>();  // Stores all entries
     // Set of valid categories for financial entries
-    private static final Set<String> categories = Set.of("Food", "Rent", "Transport", "Entertainment", "Utilities", "Healthcare", "Other");
+    private static final Set<String> categories = Set.of("food", "rent", "transport", 
+                    "entertainment", "utilities", "healthcare","income", "other");
 
     // Adds new income or expense entry with validation
     public boolean addFinancialEntry(String type, String category, double amount) {
         // Negative number is enetered or type is invalid
-        if (amount < 0 || (!type.equals("Income") && !type.equals("Expense"))) 
+        if (amount < 0 || (!type.equals("income") && !type.equals("expense"))) 
         {
             return false; // Invalid entry
         }
@@ -31,6 +32,7 @@ public class BudgetModel {
 
     // Deletes an entry at a specified index
     public boolean deleteEntry(int index) {
+        index--; // Adjust index to be zero-based
         if (index < 0 || index >= entries.size()) {
             return false; // Check valid index
         }
