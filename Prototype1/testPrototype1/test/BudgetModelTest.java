@@ -24,7 +24,7 @@ public class BudgetModelTest {
 
         // Verify that the entries were added correctly
         assertEquals(2, model.getEntries().size(), "Should have 2 valid entries");
-        assertEquals("income", model.getEntries().get(0).type, "First entry should be income"); // Redundant?
+        assertEquals("income", model.getEntries().get(0).type, "First entry should be income");
     }
 
     /**
