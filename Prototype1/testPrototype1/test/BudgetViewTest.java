@@ -15,7 +15,7 @@ public class BudgetViewTest {
     @Test
     public void testDisplay() {
         String simulatedInput = "1\nTestInput\n100.50\n2\n"; // inputs for: menu, string, double, int
-        System.setIn(new ByteArrayInputStream(simulatedInput.getBytes())); // ?
+        System.setIn(new ByteArrayInputStream(simulatedInput.getBytes())); //
         BudgetView view = new BudgetView();
 
         int choice = view.showMenu();
