@@ -148,15 +148,63 @@ To meet ENSE 375 guidelines, the project must address the following design const
 
 ---
 
-## Solution
+## Solutions
 
 ### Solution 1
+Prototype 1 – Core Budget Tracker (Minimal Viable Product)
+Focus: Basic data handling and validation
+ Model Responsibilities:
+1. Add, edit, and delete income and expense entries
+2. Categorize entries (e.g., Food, Rent, Transport, etc.)
+3. Calculate total income, total expenses, and balance
+4. Validate inputs (non-negative values, valid categories)
+
+View Responsibilities (Console-based):
+1. Simple CLI menus for adding/viewing income/expenses
+2. Display balance summary
+3. Show a list of transactions by category
 
 
+Controller Responsibilities:
+1. Receive user commands and delegate to model
+2. Route model data back to the view
+
+Testing Scope:
+1. Unit testing for data validation and calculations
+2. Boundary value and equivalence class testing on input fields
+
+Not Chosen Because:
+1. I/O and logic are coupled too closely
+2. An infinite loop is present blocking testing.
+3. No interfaces
 
 ### Solution 2
+Prototype 2 – Categorization & Basic Visualization
 
+Adds: Data visualization and persistent storage
 
+ Model Enhancements:
+Store transaction data in a local file or simple DB (e.g., SQLite or CSV)
+1. Summarize data by category (total per category)
+2. Provide filtered lists (e.g., view all 'Food' expenses this month)
+
+View Enhancements:
+1. Display category-wise summaries
+2. Basic pie chart (text or ASCII in CLI, or JavaFX/Swing if GUI is added)
+3. Input prompts for filtering or summarizing
+
+Controller Enhancements:
+1. Handle data persistence (load/save)
+2. Pass filtered requests and summaries from model to view
+
+Testing Scope:
+1. Integration testing of input/output flow
+2. Path testing and use case testing (e.g., adding and viewing categorized expenses)
+
+Not Chosen Because:
+1. 
+2. 
+3. 
 
 ### Final Solution
 
