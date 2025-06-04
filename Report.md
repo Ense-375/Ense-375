@@ -174,9 +174,7 @@ Testing Scope:
 2. Boundary value and equivalence class testing on input fields
 
 Not Chosen Because:
-1. I/O and logic are coupled too closely
-2. An infinite loop is present blocking testing.
-3. No interfaces
+Solution 1 establishes a solid foundation for the budget tracker and captures essential business logic. However, its architecture focuses primarily on manual console interaction, which limits the scope of automated testing. With minor adjustments—like abstracting dependencies, refactoring the input loop, and encapsulating data—it could become significantly more testable without losing its core simplicity.
 
 ### Solution 2
 Prototype 2 – Categorization & Basic Visualization
@@ -202,9 +200,7 @@ Testing Scope:
 2. Path testing and use case testing (e.g., adding and viewing categorized expenses)
 
 Not Chosen Because:
-1. 
-2. 
-3. 
+While Solution 2 adds important features like persistence and visualization, it introduces many new testing challenges. File/database I/O introduces external dependencies that hinder unit testing, and the addition of filtering and visual output increases the need for exhaustive integration and use-case testing. Without interfaces, dependency injection, or clear separation of concerns, automated testing remains difficult to scale and maintain.
 
 ### Final Solution
 
