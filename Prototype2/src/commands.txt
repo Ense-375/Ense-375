@@ -21,3 +21,10 @@ CREATE TABLE income (
     ->     amount DECIMAL(10, 2) NOT NULL CHECK (amount >= 0),
     ->     source VARCHAR(255) NOT NULL
     -> );
+
+
+    TO COMPILE THE APPLICATION:
+    javac -cp "lib/*" -d bin src/*.java     (when calling from Prototype2 folder)
+
+    TO RUN THE APPLICATION:
+    java -cp "bin;lib/*" Main     (when calling from Prototype2 folder)
