@@ -14,7 +14,7 @@ import java.util.*;
 
 
 public class BudgetModel {
-    private static final String DB_URL = "jdbc:mysql://localhost:3306/budget_tracker_db";
+    private static final String DB_URL = "jdbc:mysql://142.3.24.123:44445/budget_tracker_db";
     private static final String DB_USER = "budget";
     private static final String DB_PASSWORD = "Budget1";
 
@@ -23,9 +23,11 @@ public class BudgetModel {
     public BudgetModel() {
         try {
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            System.out.println("✅ Database connection successful!");
         } catch (SQLException e) {
+            System.err.println("❌ Database connection failed!");
             e.printStackTrace();
-            throw new RuntimeException("Failed to connect to the database. (BudgetModel, line 25)");
+            throw new RuntimeException("Failed to connect to the database");
         }
     }
 

@@ -1,0 +1,3 @@
+to test the connection to the database: 
+javac -cp "lib/*" src/DatabaseConnectionTest.java                                                                                                                                      
+java -cp "src;lib/*" DatabaseConnectionTest                                                                                                                                            
