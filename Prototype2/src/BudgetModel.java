@@ -40,7 +40,8 @@ public class BudgetModel {
         if (amount < 0 || (!type.equals("income") && !type.equals("expense"))) {
             return false;
         }
-        if (!categories.contains(categoryOrSource)) {
+        if (!categories.contains(categoryOrSource) && type.equals("expense")) {
+            System.out.println("Invalid category: " + categoryOrSource);
             return false;
         }
 
