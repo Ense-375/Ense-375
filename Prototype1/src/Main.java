@@ -1,3 +1,4 @@
+
 // Main.java
 // This class serves as the entry point for the Personal Budget Tracker application.
 // It initializes the model, view, and controller, and starts the application loop.
