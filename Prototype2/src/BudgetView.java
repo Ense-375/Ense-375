@@ -48,8 +48,8 @@ public class BudgetView {
             System.out.println("No entries found.");
         } else {
             System.out.println("\n=== Financial Entries ===");
-            for (int i = 0; i < entries.size(); i++) {
-                System.out.println((i + 1) + ". " + entries.get(i));
+            for (FinancialEntry entry : entries) {
+                System.out.println("ID: " + entry.getId() + " | " + entry);
             }
         }
     }

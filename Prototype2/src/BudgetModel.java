@@ -23,9 +23,9 @@ public class BudgetModel {
     public BudgetModel() {
         try {
             connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            System.out.println("✅ Database connection successful!");
+            System.out.println(" Database connection successful!");
         } catch (SQLException e) {
-            System.err.println("❌ Database connection failed!");
+            System.err.println(" Database connection failed!");
             e.printStackTrace();
             throw new RuntimeException("Failed to connect to the database");
         }
@@ -162,4 +162,15 @@ public class BudgetModel {
         return new ArrayList<>(categories);
     }
 
+    // Close the database connection
+    public void close() {
+        try {
+            if (connection != null && !connection.isClosed()) {
+                connection.close();
+                System.out.println("Database connection closed.");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
 }

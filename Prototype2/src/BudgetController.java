@@ -3,7 +3,7 @@
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
 // Last edited by Dmytro on June 7, 2025
 
-import java.util.Set;
+import java.util.List;
 
 
 public class BudgetController {
@@ -36,18 +36,22 @@ public class BudgetController {
 
     // Add an income or expense entry
     private void addEntry() {
-        String type = view.promptString("Enter type (income/expense): ");
-        type = type.toLowerCase(); // Normalize input to lowercase
-        String category = "income";
-        // Prompt for category only if type is expense
+        String type = view.promptString("Enter type (income/expense): ").toLowerCase();
+        String categoryOrSource;
+
         if ("expense".equals(type)) {
-            Set<String> validCategories = model.getCategories(); // Get valid categories from model
+            List<String> validCategories = model.getCategories();
             view.displayMessage("Here are the valid categories: " + validCategories);
-            category = view.promptString("Enter category: ");
-            category = category.toLowerCase(); // Normalize input to lowercase
+            categoryOrSource = view.promptString("Enter category: ").toLowerCase();
+        } else if ("income".equals(type)) {
+            categoryOrSource = view.promptString("Enter source: ").toLowerCase();
+        } else {
+            view.displayMessage("Invalid type. Please enter 'income' or 'expense'.");
+            return;
         }
+
         double amount = view.promptDouble("Enter amount: ");
-        if (model.addFinancialEntry(type, category, amount)) {
+        if (model.addFinancialEntry(type, categoryOrSource, amount)) {
             view.displayMessage("Entry added successfully.");
         } else {
             view.displayMessage("Invalid entry.");
@@ -57,11 +61,12 @@ public class BudgetController {
 
     // Delete an entry by index
     private void deleteEntry() {
-        int index = view.promptInt("Enter entry index to delete: ");
-        if (model.deleteEntry(index)) {
+        String type = view.promptString("Enter type of entry to delete (income/expense): ").toLowerCase();
+        int id = view.promptInt("Enter entry ID to delete: ");
+        if (model.deleteEntry(type, id)) {
             view.displayMessage("Entry deleted.");
         } else {
-            view.displayMessage("Invalid index.");
+            view.displayMessage("Invalid entry ID or type.");
         }
     }
 
@@ -77,8 +82,25 @@ public class BudgetController {
 
     // Show entries filtered by category
     private void viewByCategory() {
-        String category = view.promptString("Enter category: ");
-        view.displayEntries(model.getEntriesByCategory(category));
+        String type = view.promptString("Enter type (income/expense): ").toLowerCase();
+        String categoryOrSource;
+        if ("expense".equals(type)) {
+            List<String> validCategories = model.getCategories();
+            view.displayMessage("Here are the valid categories: " + validCategories);
+            categoryOrSource = view.promptString("Enter category: ").toLowerCase();
+        } else if ("income".equals(type)) {
+            categoryOrSource = view.promptString("Enter source: ").toLowerCase();
+        } else {
+            view.displayMessage("Invalid type.");
+            return;
+        }
+
+        List<FinancialEntry> filteredEntries = model.getEntriesByTypeAndCategory(type, categoryOrSource);
+        if (filteredEntries.isEmpty()) {
+            view.displayMessage("No entries found for the specified category/source.");
+        } else {
+            view.displayEntries(filteredEntries);
+        }
     }
 
 

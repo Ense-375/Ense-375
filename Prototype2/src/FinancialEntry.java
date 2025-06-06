@@ -4,22 +4,45 @@
 // Last edited by Dmytro on June 7, 2025
 
 public class FinancialEntry {
-        public String type;   // "Income" or "Expense"
-        public String category; // Category of the entry (e.g., "Food", "Rent")
-        public double amount;   // Amount of the entry
+    private int id;
+    private String type;
+    private String categoryOrSource;
+    private double amount;
 
-        public FinancialEntry(String type, String category, double amount) {
-            this.type = type;
-            this.category = category;
-            this.amount = amount;
-        }
-        @Override
-        // Returns a string representation of the financial entry
-        public String toString() {
-            return "Financial Entry{" +
-                    "type = '" + type + '\'' +
-                    ", category = '" + category + '\'' +
-                    ", amount = " + amount +
-                    '}';
-        }
+    // Constructor without id (for inserting new entries)
+    public FinancialEntry(String type, String categoryOrSource, double amount) {
+        this.type = type;
+        this.categoryOrSource = categoryOrSource;
+        this.amount = amount;
     }
+
+    // Constructor with id (for retrieving existing entries)
+    public FinancialEntry(int id, String type, String categoryOrSource, double amount) {
+        this.id = id;
+        this.type = type;
+        this.categoryOrSource = categoryOrSource;
+        this.amount = amount;
+    }
+
+    // Getters and setters
+    public int getId() {
+        return id;
+    }
+
+    public String getType() {
+        return type;
+    }
+
+    public String getCategoryOrSource() {
+        return categoryOrSource;
+    }
+
+    public double getAmount() {
+        return amount;
+    }
+
+    @Override
+    public String toString() {
+        return String.format("[%s] %s: %.2f", type, categoryOrSource, amount);
+    }
+}

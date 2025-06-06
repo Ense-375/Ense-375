@@ -8,10 +8,14 @@ public class Main {
     public static void main(String[] args) {
         // Create the model, view, and controller
         BudgetModel model = new BudgetModel();
-        //BudgetView view = new BudgetView();
-        //BudgetController controller = new BudgetController(model, view);
+        BudgetView view = new BudgetView();
+        BudgetController controller = new BudgetController(model, view);
 
         // Start the application
-        //controller.start();
+        try {
+            controller.start();
+        } finally {
+            model.close();
+        }
     }
 }
