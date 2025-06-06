@@ -1,91 +1,163 @@
 
 // BudgetModel.java
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
-// Last edited by Dmytro on May 29, 2025
+// Last edited by Dmytro on June 7, 2025
 
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.*;
 
-public class BudgetModel {
 
-    
-    private final List<FinancialEntry> entries = new ArrayList<>();  // Stores all entries
+public class BudgetModel {
+    private static final String DB_URL = "jdbc:mysql://localhost:3306/budget_tracker_db";
+    private static final String DB_USER = "budget";
+    private static final String DB_PASSWORD = "Budget1";
+
+    private Connection connection;
+
+    public BudgetModel() {
+        try {
+            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+        } catch (SQLException e) {
+            e.printStackTrace();
+            throw new RuntimeException("Failed to connect to the database. (BudgetModel, line 25)");
+        }
+    }
+
     // Set of valid categories for financial entries
     private static final Set<String> categories = Set.of("food", "rent", "transport", 
                     "entertainment", "utilities", "healthcare","income", "other");
 
     // Adds new income or expense entry with validation
-    public boolean addFinancialEntry(String type, String category, double amount) {
-        // Negative number is enetered or type is invalid
-        if (amount < 0 || (!type.equals("income") && !type.equals("expense"))) 
-        {
-            return false; // Invalid entry
+    public boolean addFinancialEntry(String type, String categoryOrSource, double amount) {
+        if (amount < 0 || (!type.equals("income") && !type.equals("expense"))) {
+            return false;
         }
-        // Check if the category is valid
-        if (!categories.contains(category)) 
-        {
-            return false; // Invalid category
+        if (!categories.contains(categoryOrSource)) {
+            return false;
         }
-        // Add the entry to the list
-        entries.add(new FinancialEntry(type, category, amount));
-        return true; // Entry added successfully
+
+        String tableName = type.equals("income") ? "income" : "expenses";
+        String columnName = type.equals("income") ? "source" : "category";
+
+        String sql = "INSERT INTO " + tableName + " (amount, " + columnName + ") VALUES (?, ?)";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setDouble(1, amount);
+            stmt.setString(2, categoryOrSource);
+            stmt.executeUpdate();
+            return true;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
+        }
     }
 
-    // Deletes an entry at a specified index
-    public boolean deleteEntry(int index) {
-        index--; // Adjust index to be zero-based
-        if (index < 0 || index >= entries.size()) {
-            return false; // Check valid index
+    // Delete an entry by type and ID
+    public boolean deleteEntry(String type, int id) {
+        String tableName = type.equals("income") ? "income" : "expenses";
+        String sql = "DELETE FROM " + tableName + " WHERE id = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setInt(1, id);
+            int affectedRows = stmt.executeUpdate();
+            return affectedRows > 0;
+        } catch (SQLException e) {
+            e.printStackTrace();
+            return false;
         }
-        entries.remove(index);
-        return true;
     }
 
     // Retrieves all entries
     public List<FinancialEntry> getEntries() {
-        return new ArrayList<>(entries); // Return a copy to prevent modification
+        List<FinancialEntry> entries = new ArrayList<>();
+        try (Statement stmt = connection.createStatement()) {
+            ResultSet rsIncome = stmt.executeQuery("SELECT id, amount, source FROM income");
+            while (rsIncome.next()) {
+                entries.add(new FinancialEntry("income", rsIncome.getString("source"), rsIncome.getDouble("amount")));
+            }
+
+            ResultSet rsExpenses = stmt.executeQuery("SELECT id, amount, category FROM expenses");
+            while (rsExpenses.next()) {
+                entries.add(new FinancialEntry("expense", rsExpenses.getString("category"), rsExpenses.getDouble("amount")));
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return entries;
     }
+
+    // Retrieve entries by type and category
+    public List<FinancialEntry> getEntriesByTypeAndCategory(String type, String category) {
+        List<FinancialEntry> entries = new ArrayList<>();
+        if (!type.equals("income") && !type.equals("expense")) {
+            return entries;  // invalid type
+        }
+        if (!categories.contains(category)) {
+            return entries;  // invalid category
+        }
+
+        String tableName = type.equals("income") ? "income" : "expenses";
+        String columnName = type.equals("income") ? "source" : "category";
+
+        String sql = "SELECT id, amount, " + columnName + " FROM " + tableName + " WHERE " + columnName + " = ?";
+        try (PreparedStatement stmt = connection.prepareStatement(sql)) {
+            stmt.setString(1, category);
+            ResultSet rs = stmt.executeQuery();
+            while (rs.next()) {
+                double amount = rs.getDouble("amount");
+                String catOrSource = rs.getString(columnName);
+                entries.add(new FinancialEntry(type, catOrSource, amount));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return entries;
+    }
+
 
     // Calculate total income from entries
     public double getTotalIncome() {
-        // Filter entries by type "income" and sum their amounts
-        if (entries.isEmpty()) {
-            return 0.0; // Return 0 if no entries exist
+        String sql = "SELECT SUM(amount) FROM income";
+        try (Statement stmt = connection.createStatement();
+             ResultSet rs = stmt.executeQuery(sql)) {
+            if (rs.next()) {
+                return rs.getDouble(1);
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
         }
-        return entries.stream().filter(e -> e.type.equals("income")).mapToDouble(e -> e.amount).sum();
+        return 0.0;
     }
 
     // Calculate total expenses from entries
     public double getTotalExpenses() {
-        // Filter entries by type "expense" and sum their amounts
-        if (entries.isEmpty()) {
-            return 0.0; // Return 0 if there are no entries
+    String sql = "SELECT SUM(amount) FROM expenses";
+    try (Statement stmt = connection.createStatement();
+            ResultSet rs = stmt.executeQuery(sql)) {
+        if (rs.next()) {
+            return rs.getDouble(1);
         }
-        return entries.stream().filter(e -> e.type.equals("expense")).mapToDouble(e -> e.amount).sum();
+    } catch (SQLException e) {
+        e.printStackTrace();
     }
+    return 0.0;
+}
 
     // Calculate net balance (income - expenses)
     public double getNetBalance() {
         return getTotalIncome() - getTotalExpenses();
     }
 
-    // Filter and return entry by category
-    public List<FinancialEntry> getEntriesByCategory(String category) {
-        if (!categories.contains(category)) {
-            return Collections.emptyList(); // Return empty list for invalid category
-        }
-        List<FinancialEntry> result = new ArrayList<>();
-        for (FinancialEntry e : entries) {
-            if (e.category.equals(category)) {
-                result.add(e);
-            }
-        }
-        return result; // Return filtered entries
-    }
+    
 
-    // Returns th set of valid categories
-    public Set<String> getCategories() {
-        return categories; // Return the set of valid categories
+    // Retrieve the predefined categories
+    public List<String> getCategories() {
+        return new ArrayList<>(categories);
     }
 
 }
