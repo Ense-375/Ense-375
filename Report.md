@@ -200,7 +200,16 @@ Testing Scope:
 2. Path testing and use case testing (e.g., adding and viewing categorized expenses)
 
 Not Chosen Because:
-Solution 2 had issues with input validation, allowing illogical inputs in edge cases. Model and view were still tightly coupled, as well as reliance on public field access. The test methods also rely on console I/O which can be difficult to handle without advanced control. The tests also revealed that the scalability of the program is less than desirable.
+Solution 2 had issues with input validation, allowing illogical inputs in edge cases. Model and view were still tightly coupled, as well as reliance on public field access. The test methods also rely on console I/O which can be difficult to handle without advanced control. The tests also revealed that the scalability of the program is less than expected.
+
+Suggestions:
++ MVC seperation of concerns
+  - Model handles all financial logic.
+  - View: Handles all user I/O operations without business logic
+  - Controller: Mediates model and view and coordinates interactions.
++ Use strong typing for financial entries (ex: enum).
++ Encapsulate and use getters.
++ Improve input Validation and logic.
 ### Final Solution
 
 
