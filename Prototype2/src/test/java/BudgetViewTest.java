@@ -45,7 +45,7 @@ public class BudgetViewTest {
         BudgetView view = new BudgetView();
         BudgetModel model = new BudgetModel();
         
-
+        model.clearDatabase(); 
         model.addFinancialEntry("income", "salary", 3000.0);
         model.addFinancialEntry("expense", "rent", 1000.0);
         
@@ -62,15 +62,17 @@ public class BudgetViewTest {
         BudgetView view = new BudgetView();
         BudgetModel model = new BudgetModel();
 
+        model.clearDatabase();
         model.addFinancialEntry("income", "income", 1000.0);
         model.addFinancialEntry("expense", "utilities", 800.0);
 
         double balance = model.getNetBalance();
         view.displayBalance(balance);
         assertEquals(200.0, balance, "After entries, balance should be 200.0");
-        // use these lines to check for positive balance 
         assertTrue(balance >= 0, "Balane should be non-negative");
         assertFalse(balance < 0, "balance should not be negative"); 
+
+        // error here
     }
 
     /**
