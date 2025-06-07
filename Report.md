@@ -176,8 +176,7 @@ Testing Scope:
 Not Chosen Because:
 Solution 1 establishes a solid foundation for the budget tracker and captures essential business logic. However, its architecture focuses primarily on manual console interaction, which limits the scope of automated testing. With minor adjustments—like abstracting dependencies, refactoring the input loop, and encapsulating data—it could become significantly more testable without losing its core simplicity.
 
-UML diagram:
-UML Diagram: /prototypes/375GPP1.pdf
+![UML Diagram:](/prototypes/375GPP1.png)
 
 ### Solution 2
 Prototype 2 – Categorization & Basic Visualization
@@ -214,7 +213,7 @@ Suggestions:
 + Encapsulate and use getters.
 + Improve input Validation and logic.
 
-![UML Diagram:](/prototypes/375GPP1.png)
+
 ![UML Diagram:](/prototypes/375GPP2.png)
 
 ### Final Solution
