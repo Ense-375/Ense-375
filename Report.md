@@ -214,7 +214,8 @@ Suggestions:
 + Encapsulate and use getters.
 + Improve input Validation and logic.
 
-UML Diagram: /prototypes/375GPP2.pdf
+![UML Diagram:](/prototypes/375GPP1.png)
+![UML Diagram:](/prototypes/375GPP2.png)
 
 ### Final Solution
 
