@@ -200,8 +200,7 @@ Testing Scope:
 2. Path testing and use case testing (e.g., adding and viewing categorized expenses)
 
 Not Chosen Because:
-While Solution 2 adds important features like persistence and visualization, it introduces many new testing challenges. File/database I/O introduces external dependencies that hinder unit testing, and the addition of filtering and visual output increases the need for exhaustive integration and use-case testing. Without interfaces, dependency injection, or clear separation of concerns, automated testing remains difficult to scale and maintain.
-
+Solution 2 had issues with input validation, allowing illogical inputs in edge cases. Model and view were still tightly coupled, as well as reliance on public field access. The test methods also rely on console I/O which can be difficult to handle without advanced control. The tests also revealed that the scalability of the program is less than desirable.
 ### Final Solution
 
 
