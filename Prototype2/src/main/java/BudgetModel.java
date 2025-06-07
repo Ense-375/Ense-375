@@ -18,17 +18,22 @@ public class BudgetModel {
     private static final String DB_USER = "budget";
     private static final String DB_PASSWORD = "Budget1";
 
+    private List<FinancialEntry> entries = new ArrayList<>();
     private Connection connection;
 
     public BudgetModel() {
         try {
-            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-            System.out.println(" Database connection successful!");
-        } catch (SQLException e) {
-            System.err.println(" Database connection failed!");
-            e.printStackTrace();
-            throw new RuntimeException("Failed to connect to the database");
-        }
+                Class.forName("com.mysql.cj.jdbc.Driver");  // Load the driver explicitly
+                connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+                System.out.println(" Database connection successful!");
+            } catch (ClassNotFoundException e) {
+                System.err.println(" MySQL Driver not found!");
+                e.printStackTrace();
+            } catch (SQLException e) {
+                System.err.println(" Database connection failed!");
+                e.printStackTrace();
+            }
+
     }
 
     // Set of valid categories for financial entries
@@ -153,8 +158,9 @@ public class BudgetModel {
 
     // Calculate net balance (income - expenses)
     public double getNetBalance() {
-        return getTotalIncome() - getTotalExpenses();
+    return getTotalIncome() - getTotalExpenses();
     }
+
 
     
 
@@ -174,4 +180,16 @@ public class BudgetModel {
             e.printStackTrace();
         }
     }
+
+    public void clearDatabase() {
+        try (Statement stmt = connection.createStatement()) {
+            stmt.executeUpdate("DELETE FROM income");
+            stmt.executeUpdate("DELETE FROM expenses");
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        // Also clear the in-memory list to keep model consistent
+        entries.clear();
+    }
+    
 }
