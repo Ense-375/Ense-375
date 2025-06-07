@@ -33,8 +33,8 @@ public class BudgetModelTest {
         model.addFinancialEntry("income", "income", 1000.0);
         model.addFinancialEntry("expense", "rent", 500.0);
 
-        assertNotEquals(-1, incomeId, "Income entry ID should be valid");
-        assertNotEquals(-1, expenseId, "Expense entry ID should be valid");
+        assertTrue(model.deleteEntry("income", 1), "Should delete first income entry");
+        assertEquals(1, model.getEntries().size(), "Should have 1 entry left after deleting income");
 
         assertTrue(model.deleteEntry("expense", 2), "Should delete the last remaining expense entry");
         assertFalse(model.deleteEntry("income", 1), "Should not delete non-existent income entry");
