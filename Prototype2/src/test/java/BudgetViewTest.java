@@ -1,10 +1,11 @@
-// BudjetViewTest.java
 // This file verifies the functionalities to display the main menu, user input, financial entries, and balance
 // Last Edited by Tolani on June 2, 2025
 
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.PrintStream;
 
 public class BudgetViewTest {
 
@@ -19,7 +20,7 @@ public class BudgetViewTest {
         BudgetView view = new BudgetView();
 
         int choice = view.showMenu();
-        assertTrue(choice >= 0 || choice <= 5, "Menu choice should be between 0 and 5");
+        assertTrue(choice >= 0 && choice <= 5, "Menu choice should be between 0 and 5");
 
         String input = view.promptString("Enter a string: ");
         assertNotNull(input, "Input should not be null");
@@ -44,7 +45,7 @@ public class BudgetViewTest {
         BudgetView view = new BudgetView();
         BudgetModel model = new BudgetModel();
         
-
+        model.clearDatabase(); 
         model.addFinancialEntry("income", "salary", 3000.0);
         model.addFinancialEntry("expense", "rent", 1000.0);
         
@@ -61,15 +62,17 @@ public class BudgetViewTest {
         BudgetView view = new BudgetView();
         BudgetModel model = new BudgetModel();
 
-        model.addFinancialEntry("income", "income", 0.0);
+        model.clearDatabase();
+        model.addFinancialEntry("income", "income", 1000.0);
         model.addFinancialEntry("expense", "utilities", 800.0);
 
         double balance = model.getNetBalance();
         view.displayBalance(balance);
-        assertEquals(-800.0, balance, "After entries, balance should be -800.0");
-        // use these lines to check for positive balance 
-        //assertTrue(balance >= 0, "Balane should be non-negative");
-        //assertFalse(balance < 0, "balance should not be negative"); 
+        assertEquals(200.0, balance, "After entries, balance should be 200.0");
+        assertTrue(balance >= 0, "Balane should be non-negative");
+        assertFalse(balance < 0, "balance should not be negative"); 
+
+        // error here
     }
 
     /**
@@ -83,4 +86,22 @@ public class BudgetViewTest {
         view.displayMessage(message);
         assertNotNull(message, "Message should not be null");
     }
+
+    @Test
+    public void testDisplayBalanceOutput() {
+        BudgetView view = new BudgetView();
+        double balance = 1234.56;
+
+        
+        ByteArrayOutputStream outContent = new ByteArrayOutputStream();
+        System.setOut(new PrintStream(outContent));
+
+        view.displayBalance(balance);
+
+        // Reset System.out
+        System.setOut(System.out);
+
+        assertTrue(outContent.toString().contains("1234.56"), "Output should display the correct balance");
+    }
+
 }
