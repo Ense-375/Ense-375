@@ -35,7 +35,7 @@ public class BudgetModel {
     }
 
     public Connection getConnection() {
-        return connection;
+        return this.connection;
     }
 
     // Set of valid categories for financial entries
@@ -196,14 +196,14 @@ public class BudgetModel {
 
     }
 
-    // Optional: test DB connection directly
-    public static void main(String[] args) {
-        BudgetModel model = new BudgetModel();
-        if (model.getConnection() != null) {
-            System.out.println("✅ DB test succeeded.");
-        } else {
-            System.out.println("❌ DB test failed.");
-        }
-    }
+    // // Optional: test DB connection directly
+    // public static void main(String[] args) {
+    //     BudgetModel model = new BudgetModel();
+    //     if (model.getConnection() != null) {
+    //         System.out.println(" DB test succeeded.");
+    //     } else {
+    //         System.out.println(" DB test failed.");
+    //     }
+    // }
     
 }

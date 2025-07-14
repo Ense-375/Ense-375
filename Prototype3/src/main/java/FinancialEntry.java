@@ -5,9 +5,9 @@
 
 public class FinancialEntry {
     private int id;
-    private final String type;
-    private final String categoryOrSource;
-    private final double amount;
+    private String type;
+    private String categoryOrSource;
+    private double amount;
 
     // Constructor without id (for inserting new entries)
     public FinancialEntry(String type, String categoryOrSource, double amount) {
@@ -48,6 +48,21 @@ public class FinancialEntry {
         return amount;
     }
 
+    public String getCategory() {
+        return categoryOrSource;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public void setCategory(String category) {
+        this.categoryOrSource = category;
+    }
+
+    public void setAmount(double amount) {
+        this.amount = amount;
+    }
     @Override
     public String toString() {
         return String.format("[%s] %s: %.2f", type, categoryOrSource, amount);
