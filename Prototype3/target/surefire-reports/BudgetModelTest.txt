@@ -1,4 +1,60 @@
 -------------------------------------------------------------------------------
 Test set: BudgetModelTest
 -------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.888 s -- in BudgetModelTest
+Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.384 s <<< FAILURE! -- in BudgetModelTest
+BudgetModelTest.testGetEntriesByTypeAndCategory -- Time elapsed: 0.281 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at BudgetModel.clearDatabase(BudgetModel.java:187)
+	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+BudgetModelTest.testDeleteEntry -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at BudgetModel.clearDatabase(BudgetModel.java:187)
+	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+BudgetModelTest.testGetCategories -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at BudgetModel.clearDatabase(BudgetModel.java:187)
+	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+BudgetModelTest.testGetEntriesByCategory -- Time elapsed: 0.008 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at BudgetModel.clearDatabase(BudgetModel.java:187)
+	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+BudgetModelTest.testAddFinancialEntry -- Time elapsed: 0.006 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at BudgetModel.clearDatabase(BudgetModel.java:187)
+	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+BudgetModelTest.testGetCashFlow -- Time elapsed: 0.007 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at BudgetModel.clearDatabase(BudgetModel.java:187)
+	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+
+BudgetModelTest.testCloseDatabaseConnection -- Time elapsed: 0.004 s <<< ERROR!
+java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
+	at BudgetModel.clearDatabase(BudgetModel.java:187)
+	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
+

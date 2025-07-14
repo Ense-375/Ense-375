@@ -1,5 +1,5 @@
 BudgetController.class
-Main.class
+DatabaseConnector.class
 FinancialEntry.class
 BudgetView.class
 BudgetModel.class
