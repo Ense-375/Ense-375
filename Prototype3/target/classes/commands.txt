@@ -1,6 +1,9 @@
-to test the connection to the database: 
-javac -cp "lib/*" src/DatabaseConnectionTest.java                                                                                                                                      
-java -cp "src;lib/*" DatabaseConnectionTest                                                                                                                                            
+CONNECTING TO DATABASE:
+ssh -L 3307:localhost:3306 dsj361@titan.cs.uregina.ca
+Password: Windows@slga24
+ssh -L 3306:localhost:3306 webdev
+Password: MyData@uni25
+
 
 
 MySql commands used:
@@ -23,6 +26,8 @@ CREATE TABLE income (
      );
 
 
+    
+    
     TO COMPILE THE APPLICATION:
     javac -cp "lib/*" -d bin src/*.java     (when calling from Prototype2 folder)
 

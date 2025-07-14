@@ -1,7 +1,7 @@
 
 // FinancialEntry.java
 // This class represents a financial entry in a budget management system.
-// Last edited by Dmytro on June 7, 2025
+// Last edited by Dmytro on July 13, 2025
 
 public class FinancialEntry {
     private int id;

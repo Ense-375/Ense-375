@@ -1,5 +1,3 @@
-
-
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
@@ -17,7 +15,7 @@ public class DatabaseConnector {
         try (Connection conn = connect()) {
             System.out.println("Connected successfully to university DB!");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("Database connection failed: " + e.getMessage());
         }
     }
 }

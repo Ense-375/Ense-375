@@ -1,7 +1,7 @@
 
 // BudgetModel.java
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
-// Last edited by Dmytro on June 7, 2025
+// Last edited by Dmytro on July 13, 2025
 
 import java.util.List;
 
