@@ -35,6 +35,7 @@ public class BudgetController {
     }
 
     // Add an income or expense entry
+    @SuppressWarnings("ConvertToStringSwitch")
     private void addEntry() {
         String type = view.promptString("Enter type (income/expense): ").toLowerCase();
         String categoryOrSource;
@@ -81,6 +82,7 @@ public class BudgetController {
     }
 
     // Show entries filtered by category
+    @SuppressWarnings("ConvertToStringSwitch")
     private void viewByCategory() {
         String type = view.promptString("Enter type (income/expense): ").toLowerCase();
         String categoryOrSource;

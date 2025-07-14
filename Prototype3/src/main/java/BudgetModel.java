@@ -10,30 +10,32 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.sql.Statement;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Set;
 
 
 public class BudgetModel {
-    private static final String DB_URL = "jdbc:mysql://142.3.24.123:44445/budget_tracker_db";
-    private static final String DB_USER = "budget";
-    private static final String DB_PASSWORD = "Budget1";
-
-    private List<FinancialEntry> entries = new ArrayList<>();
+    private static final String DB_URL = "jdbc:mysql://localhost:3307/dsj361";
+    private static final String DB_USER = "dsj361";
+    private static final String DB_PASSWORD = "MyData@uni25";
     private Connection connection;
+    private List<FinancialEntry> entries = new ArrayList<>();
+    
 
     public BudgetModel() {
         try {
-                Class.forName("com.mysql.cj.jdbc.Driver");  // Load the driver explicitly
-                connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
-                System.out.println(" Database connection successful!");
-            } catch (ClassNotFoundException e) {
-                System.err.println(" MySQL Driver not found!");
-                e.printStackTrace();
-            } catch (SQLException e) {
-                System.err.println(" Database connection failed!");
-                e.printStackTrace();
-            }
+            connection = DriverManager.getConnection(DB_URL, DB_USER, DB_PASSWORD);
+            System.out.println(" Connected successfully to university DB!");
+        } catch (SQLException e) {
+            System.err.println(" Database connection failed!");
+            System.err.println("SQLException: " + e.getMessage());
+        }
 
+    }
+
+    public Connection getConnection() {
+        return connection;
     }
 
     // Set of valid categories for financial entries
@@ -60,7 +62,7 @@ public class BudgetModel {
             stmt.executeUpdate();
             return true;
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("SQLException: " + e.getMessage());
             return false;
         }
     }
@@ -74,39 +76,39 @@ public class BudgetModel {
             int affectedRows = stmt.executeUpdate();
             return affectedRows > 0;
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("SQLException: " + e.getMessage());
             return false;
         }
     }
 
     // Retrieves all entries
     public List<FinancialEntry> getEntries() {
-        List<FinancialEntry> entries = new ArrayList<>();
+        List<FinancialEntry> tempEentries = new ArrayList<>();
         try (Statement stmt = connection.createStatement()) {
             ResultSet rsIncome = stmt.executeQuery("SELECT id, amount, source FROM income");
             while (rsIncome.next()) {
-                entries.add(new FinancialEntry("income", rsIncome.getString("source"), rsIncome.getDouble("amount")));
+                tempEentries.add(new FinancialEntry("income", rsIncome.getString("source"), rsIncome.getDouble("amount")));
             }
 
             ResultSet rsExpenses = stmt.executeQuery("SELECT id, amount, category FROM expenses");
             while (rsExpenses.next()) {
-                entries.add(new FinancialEntry("expense", rsExpenses.getString("category"), rsExpenses.getDouble("amount")));
+                tempEentries.add(new FinancialEntry("expense", rsExpenses.getString("category"), rsExpenses.getDouble("amount")));
             }
 
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("SQLException: " + e.getMessage());
         }
-        return entries;
+        return tempEentries;
     }
 
     // Retrieve entries by type and category
     public List<FinancialEntry> getEntriesByTypeAndCategory(String type, String category) {
-        List<FinancialEntry> entries = new ArrayList<>();
+        List<FinancialEntry> tempEentries = new ArrayList<>();
         if (!type.equals("income") && !type.equals("expense")) {
-            return entries;  // invalid type
+            return tempEentries;  // invalid type
         }
         if (!categories.contains(category)) {
-            return entries;  // invalid category
+            return tempEentries;  // invalid category
         }
 
         String tableName = type.equals("income") ? "income" : "expenses";
@@ -119,12 +121,12 @@ public class BudgetModel {
             while (rs.next()) {
                 double amount = rs.getDouble("amount");
                 String catOrSource = rs.getString(columnName);
-                entries.add(new FinancialEntry(type, catOrSource, amount));
+                tempEentries.add(new FinancialEntry(type, catOrSource, amount));
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("SQLException: " + e.getMessage());
         }
-        return entries;
+        return tempEentries;
     }
 
 
@@ -137,7 +139,7 @@ public class BudgetModel {
                 return rs.getDouble(1);
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("SQLException: " + e.getMessage());
         }
         return 0.0;
     }
@@ -151,7 +153,7 @@ public class BudgetModel {
             return rs.getDouble(1);
         }
     } catch (SQLException e) {
-        e.printStackTrace();
+        System.err.println("SQLException: " + e.getMessage());
     }
     return 0.0;
 }
@@ -177,7 +179,7 @@ public class BudgetModel {
                 System.out.println("Database connection closed.");
             }
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("SQLException: " + e.getMessage());
         }
     }
 
@@ -186,10 +188,22 @@ public class BudgetModel {
             stmt.executeUpdate("DELETE FROM income");
             stmt.executeUpdate("DELETE FROM expenses");
         } catch (SQLException e) {
-            e.printStackTrace();
+            System.err.println("SQLException: " + e.getMessage());
         }
         // Also clear the in-memory list to keep model consistent
         entries.clear();
+
+
+    }
+
+    // Optional: test DB connection directly
+    public static void main(String[] args) {
+        BudgetModel model = new BudgetModel();
+        if (model.getConnection() != null) {
+            System.out.println("✅ DB test succeeded.");
+        } else {
+            System.out.println("❌ DB test failed.");
+        }
     }
     
 }

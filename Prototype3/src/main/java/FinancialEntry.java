@@ -5,15 +5,22 @@
 
 public class FinancialEntry {
     private int id;
-    private String type;
-    private String categoryOrSource;
-    private double amount;
+    private final String type;
+    private final String categoryOrSource;
+    private final double amount;
 
     // Constructor without id (for inserting new entries)
     public FinancialEntry(String type, String categoryOrSource, double amount) {
         this.type = type;
         this.categoryOrSource = categoryOrSource;
         this.amount = amount;
+    }
+
+    // Default constructor without id (for inserting new entries)
+    public FinancialEntry() {
+        this.type = null;
+        this.categoryOrSource = null;
+        this.amount = 0.0;
     }
 
     // Constructor with id (for retrieving existing entries)

@@ -1,11 +1,12 @@
 // Last Edited by Tolani on June 6, 2025
 
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.Test;
-
 import java.util.List;
 
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
+import static org.junit.jupiter.api.Assertions.assertFalse;
+import static org.junit.jupiter.api.Assertions.assertTrue;
+import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Test;
 
 public class BudgetModelTest {
 
@@ -35,10 +36,10 @@ public class BudgetModelTest {
         model.addFinancialEntry("income", "income", 1000.0);
         model.addFinancialEntry("expense", "rent", 500.0);
 
-        assertTrue(model.deleteEntry("income", 1), "Should delete first income entry");
+        assertTrue(model.deleteEntry("income", 32), "Should delete first income entry");
         assertEquals(1, model.getEntries().size(), "Should have 1 entry left after deleting income");
 
-        assertTrue(model.deleteEntry("expense", 2), "Should delete the last remaining expense entry");
+        assertTrue(model.deleteEntry("expense", 40), "Should delete the last remaining expense entry");
         assertFalse(model.deleteEntry("income", 1), "Should not delete non-existent income entry");
         assertFalse(model.deleteEntry("invalid", 5), "Should not delete with invalid type");
 
