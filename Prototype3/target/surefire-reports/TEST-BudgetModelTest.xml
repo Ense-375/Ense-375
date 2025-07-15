@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetModelTest" time="0.399" tests="7" errors="7" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetModelTest" time="4.77" tests="7" errors="0" skipped="0" failures="1">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire8186007466443452397\surefirebooter-20250714224422928_51.jar C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire8186007466443452397 2025-07-14T22-19-23_524-jvmRun1 surefire-20250714224422928_49tmp surefire_4-20250714224422928_50tmp"/>
+    <property name="sun.java.command" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire16924300392216741880\surefirebooter-20250715011827787_238.jar C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire16924300392216741880 2025-07-14T22-19-23_524-jvmRun1 surefire-20250715011827787_236tmp surefire_19-20250715011827787_237tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\TOLANI OKE-STEVE\Downloads\p375test\Ense-375\Prototype3\target\test-classes;C:\Users\TOLANI OKE-STEVE\Downloads\p375test\Ense-375\Prototype3\target\classes;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\xerial\sqlite-jdbc\3.42.0.0\sqlite-jdbc-3.42.0.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire8186007466443452397\surefirebooter-20250714224422928_51.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire16924300392216741880\surefirebooter-20250715011827787_238.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.6+8-LTS-188"/>
@@ -61,102 +61,47 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGetEntriesByTypeAndCategory" classname="BudgetModelTest" time="0.265">
-    <error message="Cannot invoke &quot;java.sql.Connection.createStatement()&quot; because &quot;this.connection&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></error>
-    <system-err><![CDATA[ Database connection failed!
-SQLException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-]]></system-err>
+  <testcase name="testGetEntriesByTypeAndCategory" classname="BudgetModelTest" time="1.444">
+    <system-out><![CDATA[ Connected successfully to university DB!
+]]></system-out>
   </testcase>
-  <testcase name="testDeleteEntry" classname="BudgetModelTest" time="0.014">
-    <error message="Cannot invoke &quot;java.sql.Connection.createStatement()&quot; because &quot;this.connection&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+  <testcase name="testDeleteEntry" classname="BudgetModelTest" time="0.786">
+    <failure message="Should delete first income entry ==&gt; expected: &lt;true&gt; but was: &lt;false&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: Should delete first income entry ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+	at BudgetModelTest.testDeleteEntry(BudgetModelTest.java:56)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></error>
-    <system-err><![CDATA[ Database connection failed!
-SQLException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-]]></system-err>
+]]></failure>
+    <system-out><![CDATA[ Connected successfully to university DB!
+ID: 0, Type: income, Category: income
+ID: 0, Type: expense, Category: rent
+]]></system-out>
   </testcase>
-  <testcase name="testGetCategories" classname="BudgetModelTest" time="0.016">
-    <error message="Cannot invoke &quot;java.sql.Connection.createStatement()&quot; because &quot;this.connection&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></error>
-    <system-err><![CDATA[ Database connection failed!
-SQLException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-]]></system-err>
+  <testcase name="testGetCategories" classname="BudgetModelTest" time="0.312">
+    <system-out><![CDATA[ Connected successfully to university DB!
+]]></system-out>
   </testcase>
-  <testcase name="testGetEntriesByCategory" classname="BudgetModelTest" time="0.013">
-    <error message="Cannot invoke &quot;java.sql.Connection.createStatement()&quot; because &quot;this.connection&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></error>
-    <system-err><![CDATA[ Database connection failed!
-SQLException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-]]></system-err>
+  <testcase name="testGetEntriesByCategory" classname="BudgetModelTest" time="0.762">
+    <system-out><![CDATA[ Connected successfully to university DB!
+]]></system-out>
   </testcase>
-  <testcase name="testAddFinancialEntry" classname="BudgetModelTest" time="0.014">
-    <error message="Cannot invoke &quot;java.sql.Connection.createStatement()&quot; because &quot;this.connection&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></error>
-    <system-err><![CDATA[ Database connection failed!
-SQLException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-]]></system-err>
+  <testcase name="testAddFinancialEntry" classname="BudgetModelTest" time="0.46">
+    <system-out><![CDATA[ Connected successfully to university DB!
+Invalid category: invalidCategory
+]]></system-out>
   </testcase>
-  <testcase name="testGetCashFlow" classname="BudgetModelTest" time="0.017">
-    <error message="Cannot invoke &quot;java.sql.Connection.createStatement()&quot; because &quot;this.connection&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></error>
-    <system-err><![CDATA[ Database connection failed!
-SQLException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-]]></system-err>
+  <testcase name="testGetCashFlow" classname="BudgetModelTest" time="0.683">
+    <system-out><![CDATA[ Connected successfully to university DB!
+]]></system-out>
   </testcase>
-  <testcase name="testCloseDatabaseConnection" classname="BudgetModelTest" time="0.016">
-    <error message="Cannot invoke &quot;java.sql.Connection.createStatement()&quot; because &quot;this.connection&quot; is null" type="java.lang.NullPointerException"><![CDATA[java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-]]></error>
-    <system-err><![CDATA[ Database connection failed!
-SQLException: Communications link failure
-
-The last packet sent successfully to the server was 0 milliseconds ago. The driver has not received any packets from the server.
-]]></system-err>
+  <testcase name="testCloseDatabaseConnection" classname="BudgetModelTest" time="0.266">
+    <system-out><![CDATA[ Connected successfully to university DB!
+Database connection closed.
+]]></system-out>
   </testcase>
 </testsuite>

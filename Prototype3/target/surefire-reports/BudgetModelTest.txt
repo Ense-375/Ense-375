@@ -1,59 +1,15 @@
 -------------------------------------------------------------------------------
 Test set: BudgetModelTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 7, Skipped: 0, Time elapsed: 0.399 s <<< FAILURE! -- in BudgetModelTest
-BudgetModelTest.testGetEntriesByTypeAndCategory -- Time elapsed: 0.265 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-BudgetModelTest.testDeleteEntry -- Time elapsed: 0.014 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-BudgetModelTest.testGetCategories -- Time elapsed: 0.016 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-BudgetModelTest.testGetEntriesByCategory -- Time elapsed: 0.013 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-BudgetModelTest.testAddFinancialEntry -- Time elapsed: 0.014 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-BudgetModelTest.testGetCashFlow -- Time elapsed: 0.017 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
-	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
-
-BudgetModelTest.testCloseDatabaseConnection -- Time elapsed: 0.016 s <<< ERROR!
-java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
-	at BudgetModel.clearDatabase(BudgetModel.java:187)
-	at BudgetModelTest.setUp(BudgetModelTest.java:20)
+Tests run: 7, Failures: 1, Errors: 0, Skipped: 0, Time elapsed: 4.770 s <<< FAILURE! -- in BudgetModelTest
+BudgetModelTest.testDeleteEntry -- Time elapsed: 0.786 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: Should delete first income entry ==> expected: <true> but was: <false>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertTrue.failNotTrue(AssertTrue.java:63)
+	at org.junit.jupiter.api.AssertTrue.assertTrue(AssertTrue.java:36)
+	at org.junit.jupiter.api.Assertions.assertTrue(Assertions.java:210)
+	at BudgetModelTest.testDeleteEntry(BudgetModelTest.java:56)
 	at java.base/java.lang.reflect.Method.invoke(Method.java:580)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)

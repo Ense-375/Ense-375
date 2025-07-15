@@ -7,9 +7,11 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertFalse;
 import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
+
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
-
+import java.sql.SQLException;
 public class BudgetModelTest {
 
     private BudgetModel model;
@@ -37,13 +39,26 @@ public class BudgetModelTest {
         model.clearDatabase(); 
         model.addFinancialEntry("income", "income", 1000.0);
         model.addFinancialEntry("expense", "rent", 500.0);
+        List<FinancialEntry> entries = model.getEntries();
+        entries.forEach(e -> System.out.println("ID: " + e.getId() + ", Type: " + e.getType() + ", Category: " + e.getCategory()));
 
-        assertTrue(model.deleteEntry("income", 32), "Should delete first income entry");
+        int incomeId = model.getEntries().stream()
+        .filter(e -> e.getType().equals("income"))
+        .findFirst()
+        .map(FinancialEntry::getId)
+        .orElseThrow(() -> new AssertionError("No income entry found"));
+        int expenseId = model.getEntries().stream()
+        .filter(e -> e.getType().equals("expense"))
+        .findFirst()
+        .map(FinancialEntry::getId)
+        .orElseThrow(() -> new AssertionError("No expense entry found"));
+
+        assertTrue(model.deleteEntry("income", incomeId), "Should delete first income entry");
         assertEquals(1, model.getEntries().size(), "Should have 1 entry left after deleting income");
 
-        assertTrue(model.deleteEntry("expense", 40), "Should delete the last remaining expense entry");
-        assertFalse(model.deleteEntry("income", 1), "Should not delete non-existent income entry");
-        assertFalse(model.deleteEntry("invalid", 5), "Should not delete with invalid type");
+        assertTrue(model.deleteEntry("expense", expenseId), "Should delete the last remaining expense entry");
+        assertFalse(model.deleteEntry("income", incomeId), "Should not delete non-existent income entry");
+        assertFalse(model.deleteEntry("invalid", incomeId), "Should not delete with invalid type");
 
         assertTrue(model.getEntries().isEmpty(), "Entries list should be empty after all deletions");
     }
@@ -96,29 +111,29 @@ public class BudgetModelTest {
         model.clearDatabase();
 
         // Valid entries
-        model.addFinancialEntry("income", "Food", 500.0);
-        model.addFinancialEntry("income", "Food", 100.0);
-        model.addFinancialEntry("expense", "Rent", 300.0);
-        model.addFinancialEntry("expense", "Transport", 200.0);
+        model.addFinancialEntry("income", "food", 500.0);
+        model.addFinancialEntry("income", "food", 100.0);
+        model.addFinancialEntry("expense", "rent", 300.0);
+        model.addFinancialEntry("expense", "transport", 200.0);
 
         // Valid case: income + Food
-        List<FinancialEntry> incomeFood = model.getEntriesByTypeAndCategory("income", "Food");
+        List<FinancialEntry> incomeFood = model.getEntriesByTypeAndCategory("income", "food");
         assertEquals(2, incomeFood.size(), "Should return 2 income entries for Food category");
 
         // Valid case: expense + Rent
-        List<FinancialEntry> expenseRent = model.getEntriesByTypeAndCategory("expense", "Rent");
+        List<FinancialEntry> expenseRent = model.getEntriesByTypeAndCategory("expense", "rent");
         assertEquals(1, expenseRent.size(), "Should return 1 expense entry for Rent category");
 
         // Invalid type
-        List<FinancialEntry> invalidType = model.getEntriesByTypeAndCategory("invalid", "Food");
+        List<FinancialEntry> invalidType = model.getEntriesByTypeAndCategory("invalid", "food");
         assertTrue(invalidType.isEmpty(), "Invalid type should return an empty list");
 
         // Invalid category
-        List<FinancialEntry> invalidCategory = model.getEntriesByTypeAndCategory("income", "Vacation");
+        List<FinancialEntry> invalidCategory = model.getEntriesByTypeAndCategory("income", "vacation");
         assertTrue(invalidCategory.isEmpty(), "Invalid category should return an empty list");
 
         // Valid type + category with no matches
-        List<FinancialEntry> emptyCombo = model.getEntriesByTypeAndCategory("expense", "Utilities");
+        List<FinancialEntry> emptyCombo = model.getEntriesByTypeAndCategory("expense", "utilities");
         assertTrue(emptyCombo.isEmpty(), "Should return empty list if no entries match type and category");
     }
 
