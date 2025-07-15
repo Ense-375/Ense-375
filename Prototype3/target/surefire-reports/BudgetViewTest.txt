@@ -1,8 +1,8 @@
 -------------------------------------------------------------------------------
 Test set: BudgetViewTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.112 s <<< FAILURE! -- in BudgetViewTest
-BudgetViewTest.testDisplayEntries -- Time elapsed: 0.061 s <<< ERROR!
+Tests run: 5, Failures: 0, Errors: 2, Skipped: 0, Time elapsed: 0.068 s <<< FAILURE! -- in BudgetViewTest
+BudgetViewTest.testDisplayEntries -- Time elapsed: 0.021 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
 	at BudgetModel.clearDatabase(BudgetModel.java:187)
 	at BudgetViewTest.testDisplayEntries(BudgetViewTest.java:48)
@@ -10,7 +10,7 @@ java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStateme
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 	at java.base/java.util.ArrayList.forEach(ArrayList.java:1596)
 
-BudgetViewTest.testDisplayBalance -- Time elapsed: 0.006 s <<< ERROR!
+BudgetViewTest.testDisplayBalance -- Time elapsed: 0.021 s <<< ERROR!
 java.lang.NullPointerException: Cannot invoke "java.sql.Connection.createStatement()" because "this.connection" is null
 	at BudgetModel.clearDatabase(BudgetModel.java:187)
 	at BudgetViewTest.testDisplayBalance(BudgetViewTest.java:65)

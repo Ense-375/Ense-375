@@ -1,3 +1,6 @@
-BudgetModelTest.class
+BudgetController_PathTesting$TestableBudgetView.class
 FinancialEntryTest.class
+BudgetModelTest.class
+BudgetController_PathTesting.class
 BudgetViewTest.class
+DatabaseConnectorTest.class
