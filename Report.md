@@ -217,6 +217,14 @@ Suggestions:
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/375GPP2.png)
 
 ### Final Solution
+Final Solution - 
+Testing improvements
++ Testing improvements
+  - Replaces hard-coded duplicated DB connections in earlier prototypes.
+  
+Why this was chosen: Better testability, error catching and troubleshooting.
+Database logic is cleanly separated
+Can consistently access database without repeating boilerplate.
 
 
 

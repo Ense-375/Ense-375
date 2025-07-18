@@ -1,9 +1,8 @@
-// BudgetModel.java
+// BudgetController.java
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
 // Last edited by Dmytro on July 13, 2025
 
 import java.util.List;
-
 
 public class BudgetController {
     private final BudgetModel model;
@@ -58,7 +57,6 @@ public class BudgetController {
         }
     }
 
-
     // Delete an entry by index
     private void deleteEntry() {
         String type = view.promptString("Enter type of entry to delete (income/expense): ").toLowerCase();
@@ -103,6 +101,5 @@ public class BudgetController {
             view.displayEntries(filteredEntries);
         }
     }
-
 
 }
