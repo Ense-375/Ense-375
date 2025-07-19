@@ -1,12 +1,10 @@
 
-// BudgetModel.java
+// BudgetView.java
 // This class models a simple budget management system with functionalities to add, delete, and retrieve financial entries.
 // Last edited by Dmytro on July 13, 2025
 
-
 import java.util.List;
 import java.util.Scanner;
-
 
 public class BudgetView {
     private final Scanner scanner = new Scanner(System.in); // Scanner for user input
@@ -64,6 +62,5 @@ public class BudgetView {
     public void displayBalance(double balance) {
         System.out.printf("Total Balance: %.2f%n", balance);
     }
-
 
 }

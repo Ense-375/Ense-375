@@ -41,12 +41,17 @@
 ---
 
 ## List of Figures
-
-*(To be filled in if applicable)*
+1. [Prototype 1](#prototype-1)
+2. [Prototype 2](#prototype-2)
+3. [Final Solution](#final-solution)
+4. [Gantt Chart](#gantt-chart)
 
 ## List of Tables
-
-*(To be filled in if applicable)*
+1.[Components](#components)
+2.[Meeting 1 Table](#meeting-1-table)
+3.[Meeting 2 Table](#meeting-2-table)
+4.[Meeting 3 Table](#meeting-3-table)
+5.[Meeting 4 Table](#meeting-4-table)
 
 ---
 
@@ -175,7 +180,7 @@ Testing Scope:
 
 Not Chosen Because:
 Solution 1 establishes a solid foundation for the budget tracker and captures essential business logic. However, its architecture focuses primarily on manual console interaction, which limits the scope of automated testing. With minor adjustments—like abstracting dependencies, refactoring the input loop, and encapsulating data—it could become significantly more testable without losing its core simplicity.
-
+## Prototype 1
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/375GPP1.png)
 
 ### Solution 2
@@ -213,24 +218,60 @@ Suggestions:
 + Encapsulate and use getters.
 + Improve input Validation and logic.
 
-
+## Prototype 2
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/375GPP2.png)
 
 ### Final Solution
+Final Solution - 
+The final solution provides a improved and more testable MVC architecture using Java and MySQL as the backend database (via JDBC).
++ Testing improvements
+  - Replaces hard-coded duplicated DB connections in earlier prototypes.
+  
+Why this was chosen: 
+ - Better testability, error catching and troubleshooting.
+ - Much more scalable and maintainable than the prototypes.
+ - Database logic is cleanly separated.
+ - Can consistently access database without repeating boilerplate.
+
+## Final Solution 
+![UML Diagram:](./Documents/ProjectPlanning/Prototypes/FSLN.png)
+
 
 
 
 #### Components
+## Components
+| Component           | Role / Responsibility                       | Testing Methodology              |
+| ------------------- | ------------------------------------------- | -------------------------------- |
+| BudgetModel         | Business logic + data management            | JUnit unit testing (mock DB)     |
+| FinancialEntry      | Represents a single income/expense record   | JUnit (object property tests)    |
+| BudgetView          | Command-line interaction with user          | Manual input tests               |
+| BudgetController    | Orchestrates interaction between view/model | Integration + flow control tests |
+| DatabaseConnector   | Manages MySQL connection                    | Connection test + integration    |
+| MySQL Database      | Stores all financial entries persistently   | Manual DB verification           |
 
 
 
 #### Environmental, Societal, Safety, and Economic Considerations
-
+Environmental:
+ - Application does not use paper, since it is digital.
+Societal:
+ - Allows clients to make informed decisions based on their financial information.
+ - Can be used by grassroots groups as a free financial tracker.
+Economic:
+ - Avoids third-party paid services and premium rescources.
+ - Made with free open-source tools like Java, MySQL.
+ - Made to run on low-end computer and laptops.
+Safety:
+ - exception handling ensures safeguarding of information.
+ - JDBC has atomic operations for reliable data persistence.
 
 
 #### Limitations
-
-
+ - No GUI Interface, allowing for only command-line interface only and may seem unintuitive to some.
+ - No data export
+ - No authentication or login, meaning all data is public access.
+ - User must type categories manually
 
 ---
 
@@ -240,6 +281,8 @@ Suggestions:
 
 **Time:** May 11, 2025, 12:20pm - 12:50pm
 **Agenda:** Decide on the project idea
+
+## Meeting 1 Table
 
 | Team Member      | Previous Task | Completion State | Next Task |
 |------------------|---------------|------------------|-----------|
@@ -252,6 +295,8 @@ Suggestions:
 **Time:** May 21, 2025, 12:20pm - 12:50pm  
 **Agenda:** Complete the Design Requirements part of the report
 
+## Meeting 2 Table
+
 | Team Member      | Previous Task | Completion State | Next Task     |
 |------------------|---------------|------------------|---------------|
 | Tolani    | Write Problem Definition        | Completed              | Write Functional and Non-functional requirements|
@@ -261,6 +306,8 @@ Suggestions:
 ### Meeting 3
 **Time:** Month Date, Year, Start–End  
 **Agenda:** Review of Individual Progress
+
+## Meeting 3 Table
 
 | Team Member      | Previous Task | Completion State | Next Task     |
 |------------------|---------------|------------------|---------------|
@@ -273,6 +320,8 @@ Suggestions:
 **Time:** Month Date, Year, Start–End  
 **Agenda:** Review of Individual Progress
 
+## Meeting 4 Table
+
 | Team Member      | Previous Task | Completion State | Next Task     |
 |------------------|---------------|------------------|---------------|
 | Team member 1    | Task 1        | 80%              | Task 1, Task 5|
@@ -283,15 +332,27 @@ Suggestions:
 ---
 
 ## Project Management
-
+## Gantt Chart
+![Gantt Chart:](./Documents/ProjectPlanning/gantt_chart.png)
 
 
 ---
 
 ## Conclusion and Future Work
+  In this project, we successfully developed a fully functional Budjet Tracker Application that allows suers to manage their finances with ease. The system was made with a modular architecture using the MVC design pattern, and integrates a MySQL database as storage.
+Key features include:
+ - Adding, viewing, filtering, and deleting financial entries (both income and expenses).
+ - Providing summarized financial data, such as total income, total expenses, and net balance.
+ - Supporting category-based filtering to help users track spending habits.
+ - Interactive console-based user interface for intuitive usage.
+ - Reliable database connectivity through a dedicated DatabaseConnector class.
+ All features were tested to ensure reliability of each component.
 
 
+ Future Work:
 
+ Despite numerous successes, some limitations to the applicatiion still need to be implemented.
+ Console-based UI, adding user login system and dynamic categories.
 ---
 
 ## References
