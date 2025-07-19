@@ -332,15 +332,26 @@ Safety:
 ---
 
 ## Project Management
-
+![Gantt Chart:](./Documents/ProjectPlanning/gantt_chart.png)
 
 
 ---
 
 ## Conclusion and Future Work
+  In this project, we successfully developed a fully functional Budjet Tracker Application that allows suers to manage their finances with ease. The system was made with a modular architecture using the MVC design pattern, and integrates a MySQL database as storage.
+Key features include:
+ - Adding, viewing, filtering, and deleting financial entries (both income and expenses).
+ - Providing summarized financial data, such as total income, total expenses, and net balance.
+ - Supporting category-based filtering to help users track spending habits.
+ - Interactive console-based user interface for intuitive usage.
+ - Reliable database connectivity through a dedicated DatabaseConnector class.
+ All features were tested to ensure reliability of each component.
 
 
+ Future Work:
 
+ Despite numerous successes, some limitations to the applicatiion still need to be implemented.
+ Console-based UI, adding user login system and dynamic categories.
 ---
 
 ## References
