@@ -44,7 +44,7 @@
 1. [Prototype 1](#prototype-1)
 2. [Prototype 2](#prototype-2)
 3. [Final Solution](#final-solution)
-
+4. [Gantt Chart](#gantt-chart)
 
 ## List of Tables
 1.[Components](#components)
@@ -332,6 +332,7 @@ Safety:
 ---
 
 ## Project Management
+## Gantt Chart
 ![Gantt Chart:](./Documents/ProjectPlanning/gantt_chart.png)
 
 
