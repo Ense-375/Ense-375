@@ -41,12 +41,18 @@
 ---
 
 ## List of Figures
+1. [Prototype 1] (#prototype1)
+2.
+3.
 
-*(To be filled in if applicable)*
 
 ## List of Tables
 
-*(To be filled in if applicable)*
+1.
+2.
+3.
+4.
+5.
 
 ---
 
@@ -175,7 +181,7 @@ Testing Scope:
 
 Not Chosen Because:
 Solution 1 establishes a solid foundation for the budget tracker and captures essential business logic. However, its architecture focuses primarily on manual console interaction, which limits the scope of automated testing. With minor adjustments—like abstracting dependencies, refactoring the input loop, and encapsulating data—it could become significantly more testable without losing its core simplicity.
-
+# Prototype 1
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/375GPP1.png)
 
 ### Solution 2
@@ -213,7 +219,7 @@ Suggestions:
 + Encapsulate and use getters.
 + Improve input Validation and logic.
 
-
+# Prototype 2
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/375GPP2.png)
 
 ### Final Solution
@@ -260,8 +266,10 @@ Safety:
 
 
 #### Limitations
-
-
+ - No GUI Interface, allowing for only command-line interface only and may seem unintuitive to some.
+ - No data export
+ - No authentication or login, meaning all data is public access.
+ - User must type categories manually
 
 ---
 
