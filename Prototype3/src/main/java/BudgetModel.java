@@ -87,12 +87,12 @@ public class BudgetModel {
         try (Statement stmt = connection.createStatement()) {
             ResultSet rsIncome = stmt.executeQuery("SELECT id, amount, source FROM income");
             while (rsIncome.next()) {
-                tempEentries.add(new FinancialEntry("income", rsIncome.getString("source"), rsIncome.getDouble("amount")));
+                tempEentries.add(new FinancialEntry (rsIncome.getInt("id"),"income", rsIncome.getString("source"),rsIncome.getDouble("amount")));
             }
 
             ResultSet rsExpenses = stmt.executeQuery("SELECT id, amount, category FROM expenses");
             while (rsExpenses.next()) {
-                tempEentries.add(new FinancialEntry("expense", rsExpenses.getString("category"), rsExpenses.getDouble("amount")));
+                tempEentries.add(new FinancialEntry(rsExpenses.getInt("id"), "expense", rsExpenses.getString("category"), rsExpenses.getDouble("amount")));
             }
 
         } catch (SQLException e) {
@@ -121,7 +121,8 @@ public class BudgetModel {
             while (rs.next()) {
                 double amount = rs.getDouble("amount");
                 String catOrSource = rs.getString(columnName);
-                tempEentries.add(new FinancialEntry(type, catOrSource, amount));
+                tempEentries.add(new FinancialEntry(rs.getInt("id"), type, catOrSource, amount));
+
             }
         } catch (SQLException e) {
             System.err.println("SQLException: " + e.getMessage());

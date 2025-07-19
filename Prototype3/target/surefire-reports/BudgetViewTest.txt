@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: BudgetViewTest
 -------------------------------------------------------------------------------
-Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 1.071 s -- in BudgetViewTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 2.451 s -- in BudgetViewTest

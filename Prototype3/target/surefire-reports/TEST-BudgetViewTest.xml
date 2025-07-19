@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetViewTest" time="1.071" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetViewTest" time="2.451" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire16924300392216741880\surefirebooter-20250715011827787_238.jar C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire16924300392216741880 2025-07-14T22-19-23_524-jvmRun1 surefire-20250715011827787_236tmp surefire_19-20250715011827787_237tmp"/>
+    <property name="sun.java.command" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire6418927316003374683\surefirebooter-20250718192218812_3.jar C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire6418927316003374683 2025-07-18T19-22-18_556-jvmRun1 surefire-20250718192218812_1tmp surefire_0-20250718192218812_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\TOLANI OKE-STEVE\Downloads\p375test\Ense-375\Prototype3\target\test-classes;C:\Users\TOLANI OKE-STEVE\Downloads\p375test\Ense-375\Prototype3\target\classes;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\xerial\sqlite-jdbc\3.42.0.0\sqlite-jdbc-3.42.0.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire16924300392216741880\surefirebooter-20250715011827787_238.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire6418927316003374683\surefirebooter-20250718192218812_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.6+8-LTS-188"/>
@@ -53,7 +53,7 @@
     <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
     <property name="sun.os.patch.level" value=""/>
     <property name="native.encoding" value="Cp1252"/>
-    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\dotnet\;C:\Users\TOLANI OKE-STEVE\Downloads\maven-mvnd-1.0.2-windows-amd64\maven-mvnd-1.0.2-windows-amd64\bin;C:\Users\TOLANI OKE-STEVE\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Users\TOLANI OKE-STEVE/.local/bin;C:\Users\TOLANI OKE-STEVE\.cargo\bin;C:\Users\TOLANI OKE-STEVE\AppData\Local\Microsoft\WindowsApps;C:\Users\TOLANI OKE-STEVE\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\TOLANI OKE-STEVE\AppData\Roaming\npm;C:\intelFPGA\20.1\modelsim_ase\win32aloem;C:\Users\TOLANI OKE-STEVE\AppData\Local\Microsoft\WindowsApps;C:\Users\TOLANI OKE-STEVE\Downloads\maven-mvnd-1.0.2-windows-amd64\maven-mvnd-1.0.2-windows-amd64\bin;C:\Program Files\Java\jdk-24\bin;C:\Program Files\OpenVPN\bin;C:\Users\TOLANI OKE-STEVE\Downloads\flutter\flutter\bin;c:\Users\TOLANI OKE-STEVE\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;."/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-21\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\Common Files\Oracle\Java\java8path;C:\Program Files (x86)\Common Files\Oracle\Java\javapath;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files (x86)\NVIDIA Corporation\PhysX\Common;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\Microsoft VS Code\bin;C:\Program Files\Git\cmd;C:\Program Files\PuTTY\;C:\Program Files\nodejs\;C:\Program Files\Docker\Docker\resources\bin;C:\Program Files\NVIDIA Corporation\NVIDIA app\NvDLISR;C:\Program Files\dotnet\;C:\Users\TOLANI OKE-STEVE\Downloads\maven-mvnd-1.0.2-windows-amd64\maven-mvnd-1.0.2-windows-amd64\bin;C:\Users\TOLANI OKE-STEVE\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.7.6-hotspot\bin;C:\Users\TOLANI OKE-STEVE/.local/bin;C:\Users\TOLANI OKE-STEVE\.cargo\bin;C:\Users\TOLANI OKE-STEVE\AppData\Local\Microsoft\WindowsApps;C:\Users\TOLANI OKE-STEVE\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\TOLANI OKE-STEVE\AppData\Roaming\npm;C:\intelFPGA\20.1\modelsim_ase\win32aloem;C:\Users\TOLANI OKE-STEVE\AppData\Local\Microsoft\WindowsApps;C:\Users\TOLANI OKE-STEVE\Downloads\maven-mvnd-1.0.2-windows-amd64\maven-mvnd-1.0.2-windows-amd64\bin;C:\Program Files\Java\jdk-24\bin;C:\Program Files\OpenVPN\bin;C:\Users\TOLANI OKE-STEVE\Downloads\flutter\flutter\bin;c:\Users\TOLANI OKE-STEVE\.vscode\extensions\ms-python.debugpy-2025.10.0-win32-x64\bundled\scripts\noConfigScripts;c:\Users\TOLANI OKE-STEVE\AppData\Roaming\Code\User\globalStorage\github.copilot-chat\debugCommand;."/>
     <property name="java.vm.info" value="mixed mode, sharing"/>
     <property name="stderr.encoding" value="Cp1252"/>
     <property name="java.vendor" value="Oracle Corporation"/>
@@ -61,20 +61,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testDisplayEntries" classname="BudgetViewTest" time="0.563">
+  <testcase name="testDisplayEntries" classname="BudgetViewTest" time="1.37">
     <system-out><![CDATA[ Connected successfully to university DB!
 
 === Financial Entries ===
-ID: 0 | [income] salary: 3000.00
-ID: 0 | [expense] rent: 1000.00
+ID: 235 | [income] salary: 3000.00
+ID: 252 | [expense] rent: 1000.00
 ]]></system-out>
   </testcase>
-  <testcase name="testDisplayBalance" classname="BudgetViewTest" time="0.463">
+  <testcase name="testDisplayBalance" classname="BudgetViewTest" time="1.043">
     <system-out><![CDATA[ Connected successfully to university DB!
 Total Balance: 200.00
 ]]></system-out>
   </testcase>
-  <testcase name="testDisplayBalanceOutput" classname="BudgetViewTest" time="0.006"/>
-  <testcase name="testDisplay" classname="BudgetViewTest" time="0.02"/>
-  <testcase name="testDisplayMessage" classname="BudgetViewTest" time="0.004"/>
+  <testcase name="testDisplayBalanceOutput" classname="BudgetViewTest" time="0.005"/>
+  <testcase name="testDisplay" classname="BudgetViewTest" time="0.015"/>
+  <testcase name="testDisplayMessage" classname="BudgetViewTest" time="0.005"/>
 </testsuite>

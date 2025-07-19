@@ -64,7 +64,7 @@ public class BudgetController {
         String type = view.promptString("Enter type of entry to delete (income/expense): ").toLowerCase();
         int id = view.promptInt("Enter entry ID to delete: ");
         if (model.deleteEntry(type, id)) {
-            view.displayMessage("Entry deleted.");
+            view.displayMessage("Entry deleted");
         } else {
             view.displayMessage("Invalid entry ID or type.");
         }
