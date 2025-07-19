@@ -41,18 +41,17 @@
 ---
 
 ## List of Figures
-1. [Prototype 1] (#prototype1)
-2.
-3.
+1. [Prototype 1](#prototype-1)
+2. [Prototype 2](#prototype-2)
+3. [Final Solution](#final-solution)
 
 
 ## List of Tables
-
-1.
-2.
-3.
-4.
-5.
+1.[Components](#components)
+2.[Meeting 1 Table](#meeting-1-table)
+3.[Meeting 2 Table](#meeting-2-table)
+4.[Meeting 3 Table](#meeting-3-table)
+5.[Meeting 4 Table](#meeting-4-table)
 
 ---
 
@@ -181,7 +180,7 @@ Testing Scope:
 
 Not Chosen Because:
 Solution 1 establishes a solid foundation for the budget tracker and captures essential business logic. However, its architecture focuses primarily on manual console interaction, which limits the scope of automated testing. With minor adjustments—like abstracting dependencies, refactoring the input loop, and encapsulating data—it could become significantly more testable without losing its core simplicity.
-# Prototype 1
+## Prototype 1
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/375GPP1.png)
 
 ### Solution 2
@@ -219,7 +218,7 @@ Suggestions:
 + Encapsulate and use getters.
 + Improve input Validation and logic.
 
-# Prototype 2
+## Prototype 2
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/375GPP2.png)
 
 ### Final Solution
@@ -233,12 +232,15 @@ Why this was chosen:
  - Much more scalable and maintainable than the prototypes.
  - Database logic is cleanly separated.
  - Can consistently access database without repeating boilerplate.
+
+## Final Solution 
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/FSLN.png)
 
 
 
 
 #### Components
+## Components
 | Component           | Role / Responsibility                       | Testing Methodology              |
 | ------------------- | ------------------------------------------- | -------------------------------- |
 | BudgetModel         | Business logic + data management            | JUnit unit testing (mock DB)     |
@@ -280,6 +282,8 @@ Safety:
 **Time:** May 11, 2025, 12:20pm - 12:50pm
 **Agenda:** Decide on the project idea
 
+## Meeting 1 Table
+
 | Team Member      | Previous Task | Completion State | Next Task |
 |------------------|---------------|------------------|-----------|
 | Tolani    | Prepare project ideas           | Completed              | Write Problem Definition    |
@@ -291,6 +295,8 @@ Safety:
 **Time:** May 21, 2025, 12:20pm - 12:50pm  
 **Agenda:** Complete the Design Requirements part of the report
 
+## Meeting 2 Table
+
 | Team Member      | Previous Task | Completion State | Next Task     |
 |------------------|---------------|------------------|---------------|
 | Tolani    | Write Problem Definition        | Completed              | Write Functional and Non-functional requirements|
@@ -300,6 +306,8 @@ Safety:
 ### Meeting 3
 **Time:** Month Date, Year, Start–End  
 **Agenda:** Review of Individual Progress
+
+## Meeting 3 Table
 
 | Team Member      | Previous Task | Completion State | Next Task     |
 |------------------|---------------|------------------|---------------|
@@ -311,6 +319,8 @@ Safety:
 ### Meeting 4
 **Time:** Month Date, Year, Start–End  
 **Agenda:** Review of Individual Progress
+
+## Meeting 4 Table
 
 | Team Member      | Previous Task | Completion State | Next Task     |
 |------------------|---------------|------------------|---------------|
