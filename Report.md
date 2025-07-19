@@ -218,22 +218,45 @@ Suggestions:
 
 ### Final Solution
 Final Solution - 
-Testing improvements
+The final solution provides a improved and more testable MVC architecture using Java and MySQL as the backend database (via JDBC).
 + Testing improvements
   - Replaces hard-coded duplicated DB connections in earlier prototypes.
   
-Why this was chosen: Better testability, error catching and troubleshooting.
-Database logic is cleanly separated
-Can consistently access database without repeating boilerplate.
+Why this was chosen: 
+ - Better testability, error catching and troubleshooting.
+ - Much more scalable and maintainable than the prototypes.
+ - Database logic is cleanly separated.
+ - Can consistently access database without repeating boilerplate.
+![UML Diagram:](./Documents/ProjectPlanning/Prototypes/FSLN.png)
+
 
 
 
 #### Components
+| Component           | Role / Responsibility                       | Testing Methodology              |
+| ------------------- | ------------------------------------------- | -------------------------------- |
+| BudgetModel         | Business logic + data management            | JUnit unit testing (mock DB)     |
+| FinancialEntry      | Represents a single income/expense record   | JUnit (object property tests)    |
+| BudgetView          | Command-line interaction with user          | Manual input tests               |
+| BudgetController    | Orchestrates interaction between view/model | Integration + flow control tests |
+| DatabaseConnector   | Manages MySQL connection                    | Connection test + integration    |
+| MySQL Database      | Stores all financial entries persistently   | Manual DB verification           |
 
 
 
 #### Environmental, Societal, Safety, and Economic Considerations
-
+Environmental:
+ - Application does not use paper, since it is digital.
+Societal:
+ - Allows clients to make informed decisions based on their financial information.
+ - Can be used by grassroots groups as a free financial tracker.
+Economic:
+ - Avoids third-party paid services and premium rescources.
+ - Made with free open-source tools like Java, MySQL.
+ - Made to run on low-end computer and laptops.
+Safety:
+ - exception handling ensures safeguarding of information.
+ - JDBC has atomic operations for reliable data persistence.
 
 
 #### Limitations
