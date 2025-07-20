@@ -25,7 +25,7 @@ public class IntegrationTest {
 
     @Test
     public void controllerAndViewIntegration() {
-        // Add entry: 1 (menu), income, job, 1000, 0 (exit)
+        // Add entry: 1 (menu), income, income, 1000, 0 (exit)
         view.setInputs(List.of("1", "income", "income", "1000", "0"));
         controller.start();
         assertTrue(view.getMessages().stream().anyMatch(m -> m.contains("Entry added successfully.")));
