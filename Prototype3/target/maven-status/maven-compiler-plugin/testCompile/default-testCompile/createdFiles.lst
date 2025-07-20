@@ -4,5 +4,7 @@ BudgetController_PathTesting.class
 BudgetViewTest.class
 BudgetController_DataFlowTesting.class
 BudgetController_PathTesting$TestableBudgetView.class
+IntegrationTest$TestableBudgetView.class
+IntegrationTest.class
 BudgetController_DataFlowTesting$TestableBudgetView.class
 DatabaseConnectorTest.class

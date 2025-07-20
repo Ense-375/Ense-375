@@ -2,7 +2,7 @@
 
 ### Test Suites and Test Cases
 
-##### Note: In order to run any of the test you must be connected to the database first check this file for instructions [DB instructions]()
+##### Note: In order to run any of the tests you must be connected to the database first check this file for instructions [DB instructions](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/main/java/commands.txt)
 
 ### Test Documentation
 Detailed breakdown of all testing methodologies conducted on this application provided below: 

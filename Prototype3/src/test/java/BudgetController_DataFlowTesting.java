@@ -57,7 +57,6 @@ public class BudgetController_DataFlowTesting {
         view.setInputs(List.of("income", String.valueOf(id)));
         controller.start();
 
-        System.out.println("Messages: " + view.getMessages()); //debug
         assertTrue(view.getMessages().contains("Entry deleted"));
 
     }

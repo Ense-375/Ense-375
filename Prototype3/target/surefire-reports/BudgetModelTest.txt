@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
 Test set: BudgetModelTest
 -------------------------------------------------------------------------------
-Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 9.483 s -- in BudgetModelTest
+Tests run: 7, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.68 s -- in BudgetModelTest
