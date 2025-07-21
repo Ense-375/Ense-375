@@ -6,14 +6,14 @@
 
 ### Test Documentation
 Detailed breakdown of all testing methodologies conducted on this application provided below: 
-1. **Path Testing:** [Path Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20path%20Testing.pdf), Detailed Implementation: [JUNIT](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetController_PathTesting.java)
-2. **Data flow Testing:** [Data Flow](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Data%20flow%20testing.pdf), Detailed Implementation: [JUNIT](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetController_DataFlowTesting.java)
-3. **Integration Testing:** [Integration Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Integration%20testing.pdf), Detailed Implementation: [JUNIT](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/IntegrationTest.java)
-4. **Boundary value Testiing:** [Boundary value testing ](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Boundary%20value%20analysis.pdf), Detailed Implementation: [JUNIT](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetModelBoundaryTest.java)
-5. **Equivalence class Testing:** [Equivalence class testing](), Detailed Implementation: [JUNIT]()
-6. **Decision tables Testing:** [Decision tables testing](), Detailed Implementation: [JUNIT]()
-7. **State transition Testing:** [State transition testing](), Detailed Implementation: [JUNIT]()
-8. **Use case Testing:** [Use case Testing](), Detailed Implementation: [JUNIT]()
+1. **Path Testing:** [Path Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20path%20Testing.pdf), Detailed Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetController_PathTesting.java)
+2. **Data flow Testing:** [Data Flow](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Data%20flow%20testing.pdf), Detailed Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetController_DataFlowTesting.java)
+3. **Integration Testing:** [Integration Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Integration%20testing.pdf), Detailed Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/IntegrationTest.java)
+4. **Boundary value Testiing:** [Boundary value testing ](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Boundary%20value%20analysis.pdf), Detailed Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetModelBoundaryTest.java)
+5. **Equivalence class Testing:** [Equivalence class testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Equivalence%20class%20testing.pdf), Detailed Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetModelEquivalenceTest.java)
+6. **Decision tables Testing:** [Decision tables testing](), Detailed Implementation: [code]()
+7. **State transition Testing:** [State transition testing](), Detailed Implementation: [code]()
+8. **Use case Testing:** [Use case Testing](), Detailed Implementation: [code]()
 
 ### Boundary value Test
 ---
