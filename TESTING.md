@@ -9,7 +9,7 @@ Detailed breakdown of all testing methodologies conducted on this application pr
 1. [Path Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20path%20Testing.pdf)
 2. [Data Flow](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Data%20flow%20testing.pdf)
 3. [Integration Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Integration%20testing.pdf)
-4. [Boundary value testing ]()
+4. [Boundary value testing ](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Boundary%20value%20analysis.pdf)
 5. [Equivalence class testing]()
 6. [Decision tables testing]()
 7. [State transition testing]()
@@ -50,6 +50,9 @@ To perform boundary value analysis on our application, we will conduct  **robust
 | 17 | 5000.0 | expense | healthcare | Accepted valid category |
 | 18 | 5000.0 | income | utilities | Rejected invalid category |
 | 19 | 5000.0 | income | income | Accepted nominal value |
+
+### Equivalence class test
+---
 
 
 
