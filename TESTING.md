@@ -11,7 +11,7 @@ Detailed breakdown of all testing methodologies conducted on this application pr
 3. **Integration Testing:** [Integration Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Integration%20testing.pdf), Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/IntegrationTest.java)
 4. **Boundary value Testiing:** [Boundary value testing ](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Boundary%20value%20analysis.pdf), Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetModelBoundaryTest.java)
 5. **Equivalence class Testing:** [Equivalence class testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Equivalence%20class%20testing.pdf), Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetModelEquivalenceTest.java)
-6. **Decision tables Testing:** [Decision tables testing](), Implementation: [code]()
+6. **Decision tables Testing:** [Decision tables testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Decision%20tables%20test.pdf), Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetModel_DecisionTableTest.java)
 7. **State transition Testing:** [State transition testing](), Implementation: [code]()
 8. **Use case Testing:** [Use case Testing](), Implementation: [code]()
 
@@ -78,6 +78,7 @@ Similar to boundary value testing, we’ll need to identify the valid and invali
 | C5 | T | T | - | T | F | T | T |
 | C6 | T | T | - | F | F | T | F |
 | Conditions |  |  |  |  |  |  |  |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | A1 | - | - | X | - | - | - | - |
 | A2 | - | - | - | X | X | - | X |
 | A3 | X | X | - | - | - | X | - |
