@@ -2,7 +2,7 @@
 
 ### Test Suites and Test Cases
 
-**Note: In order to run any of the tests you must be connected to the database first, check this file for instructions on connecting to the database** [DB instructions](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/main/java/commands.txt)
+**Note: In order to run any of the tests you must be connected to the database first, check this file for instructions on connecting to the database:** [DB instructions](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/main/java/commands.txt)
 
 ### Test Documentation
 Detailed breakdown of all testing methodologies conducted on this application provided below: 
@@ -55,7 +55,7 @@ Similar to boundary value testing, we’ll need to identify the valid and invali
 **ECT Table**
 | case | Type | categoryOrSource | Amount | Output |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| 1 | income | income | 800.0 | valid Accepted |
+| 1 | income | income | 800.0 | valid accepted |
 | 2 | INCOME | " " | 3000.0 | invalid type |
 | 3 | income | income | 9000.0 | valid accepted |
 | 4 | expense | food | 150.0 | valid accepted |
@@ -69,7 +69,21 @@ Similar to boundary value testing, we’ll need to identify the valid and invali
 
 ### Decision tables test
 ---
-
+| conditions | Rule1 | Rule2 | Rule3 | Rule4 | Rule5 | Rule6 | Rule7 |
+| ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
+| C1 | T | F | F | F | F | F | F |
+| C2 | F | T | F | T | T | T | T |
+| C3 | F | F | T | F | F | F | F |
+| C4 | - | T | - | F | T | T | F |
+| C5 | T | T | - | T | F | T | T |
+| C6 | T | T | - | F | F | T | F |
+| Conditions |  |  |  |  |  |  |  |
+| A1 | - | - | X | - | - | - | - |
+| A2 | - | - | - | X | X | - | X |
+| A3 | X | X | - | - | - | X | - |
+| A4 | - | X | - | X | X | X | X |
+| A5 | X | X | - | X | X | X | X |
+| A6 | X | X | - | X | X | X | X |
 
 
 
