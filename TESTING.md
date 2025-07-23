@@ -69,6 +69,7 @@ Similar to boundary value testing, we’ll need to identify the valid and invali
 
 ### Decision tables test
 ---
+**Conditions**
 | conditions | Rule1 | Rule2 | Rule3 | Rule4 | Rule5 | Rule6 | Rule7 |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | C1 | T | F | F | F | F | F | F |
@@ -77,7 +78,9 @@ Similar to boundary value testing, we’ll need to identify the valid and invali
 | C4 | - | T | - | F | T | T | F |
 | C5 | T | T | - | T | F | T | T |
 | C6 | T | T | - | F | F | T | F |
-| Conditions |  |  |  |  |  |  |  |
+
+**Rules**
+| conditions | Rule1 | Rule2 | Rule3 | Rule4 | Rule5 | Rule6 | Rule7 |
 | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- | ----------- |
 | A1 | - | - | X | - | - | - | - |
 | A2 | - | - | - | X | X | - | X |
