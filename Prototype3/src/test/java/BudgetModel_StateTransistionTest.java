@@ -71,7 +71,7 @@ public class BudgetModel_StateTransistionTest {
     }
     @Test
     public void testViewBalance() {
-        // Test that views the balance and verifies the output (path s8 -> s9)
+        // Test that views the balance (path s1 -> s8)
         model.addFinancialEntry("income", "income", 1000);
         model.addFinancialEntry("expense", "food", 200);
 
