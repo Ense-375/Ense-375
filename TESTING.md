@@ -5,7 +5,7 @@
 **Note: In order to run any of the tests you must be connected to the database first, check this file for instructions on connecting to the database:** [DB instructions](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/main/java/commands.txt)
 
 ### Test Documentation
-Detailed breakdown of all testing methodologies conducted on this application provided below: 
+Detailed documentation/breakdown of all testing methodologies refer to these documents: 
 1. **Path Testing:** [Path Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20path%20Testing.pdf), Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetController_PathTesting.java)
 2. **Data flow Testing:** [Data Flow](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Data%20flow%20testing.pdf), Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/BudgetController_DataFlowTesting.java)
 3. **Integration Testing:** [Integration Testing](https://github.com/Ense-375/Ense-375/blob/main/Documents/TestDocs/Personal%20Budget%20tracker%20Integration%20testing.pdf), Implementation: [code](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/test/java/IntegrationTest.java)
@@ -15,6 +15,7 @@ Detailed breakdown of all testing methodologies conducted on this application pr
 7. **State transition Testing:** [State transition testing](), Implementation: [code]()
 8. **Use case Testing:** [Use case Testing](), Implementation: [code]()
 
+---
 ### Boundary value Test
 ---
 To perform boundary value analysis on our application, we will conduct  **robust boundary value analysis**, as it provides a more thorough validation compared to ordinary BVA. since our application handles financial data, focusing on just values within the valid range would not be sufficient so its important that we test both valid and invalid boundaries to avoid logic errors. 
@@ -89,7 +90,7 @@ Similar to boundary value testing, we’ll need to identify the valid and invali
 | A5 | X | X | - | X | X | X | X |
 | A6 | X | X | - | X | X | X | X |
 
-
+### Use case Testing
 
 
 
