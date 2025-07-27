@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetModelTest" time="9.301" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetModel_StateTransistionTest" time="6.186" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -61,36 +61,25 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGetEntriesByTypeAndCategory" classname="BudgetModelTest" time="1.467">
+  <testcase name="testAddEntry_validEntry" classname="BudgetModel_StateTransistionTest" time="1.172">
     <system-out><![CDATA[ Connected successfully to university DB!
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteEntry" classname="BudgetModelTest" time="2.252">
-    <system-out><![CDATA[ Connected successfully to university DB!
-ID: 430, Type: income, Category: income
-ID: 337, Type: expense, Category: rent
-]]></system-out>
-  </testcase>
-  <testcase name="testGetCategories" classname="BudgetModelTest" time="0.731">
+  <testcase name="testDeleteEntry_invalidEntry" classname="BudgetModel_StateTransistionTest" time="1.128">
     <system-out><![CDATA[ Connected successfully to university DB!
 ]]></system-out>
   </testcase>
-  <testcase name="testGetEntriesByCategory" classname="BudgetModelTest" time="1.383">
+  <testcase name="testViewBalance" classname="BudgetModel_StateTransistionTest" time="1.436">
     <system-out><![CDATA[ Connected successfully to university DB!
 ]]></system-out>
   </testcase>
-  <testcase name="testAddFinancialEntry" classname="BudgetModelTest" time="1.045">
+  <testcase name="testAddEntry_InvalidEntry" classname="BudgetModel_StateTransistionTest" time="0.999">
     <system-out><![CDATA[ Connected successfully to university DB!
-Invalid category: invalidCategory
+Invalid category: invalidcategory
 ]]></system-out>
   </testcase>
-  <testcase name="testGetCashFlow" classname="BudgetModelTest" time="1.701">
+  <testcase name="testDeleteEntry_validEntry" classname="BudgetModel_StateTransistionTest" time="1.445">
     <system-out><![CDATA[ Connected successfully to university DB!
-]]></system-out>
-  </testcase>
-  <testcase name="testCloseDatabaseConnection" classname="BudgetModelTest" time="0.717">
-    <system-out><![CDATA[ Connected successfully to university DB!
-Database connection closed.
 ]]></system-out>
   </testcase>
 </testsuite>

@@ -3,6 +3,8 @@
 ### Test Suites and Test Cases
 
 **Note: In order to run any of the tests you must be connected to the database first, check this file for instructions on connecting to the database:** [DB instructions](https://github.com/Ense-375/Ense-375/blob/main/Prototype3/src/main/java/commands.txt)
+1. For running these tests (BudgetViewTest.java, BudgetModelTest.java, FinancialEntry.java) Run them through maven using "mvn test" for them to execute correctly
+2. For the remanining tests they can be ran using JUNIT
 
 ### Test Documentation
 Detailed documentation/breakdown of all testing methodologies refer to these documents: 
@@ -91,6 +93,69 @@ Similar to boundary value testing, we’ll need to identify the valid and invali
 | A6 | X | X | - | X | X | X | X |
 
 ### Use case Testing
+---
+**Legend: Actors**
+1. U = User
+2. S = System
 
+**UC1**
+| Steps | Description |
+| ----------- | ----------- |
+| Main success scenario |  |
+| 1    | U: selects addEntry |
+| 2    | S: prompts user for type |
+| 3    | U: enters type |
+| 4    | S: validates type |
+| 5    | U: enters category, source & amount |
+| 6    | S: validates inputs & adds entry to DB |
+| Extensions |  |
+| 3a   | U: enters wrong type |
+|      | S: displays error and prevents entry |
+| 5a   | U: enters invalid category, source, amount |
+|      | S: displays error and prevents entry |
 
+**UC2**
+| Steps | Description |
+| ----------- | ----------- |
+| Main success scenario |  |
+| 1    | U: selects viewAllEntries |
+| 2    | S: displays all Entries in DB |
+| Extensions |  |
+| 1a   | U: enters viewAllEntries |
+|      | S: displays error if no entries present |
+
+**UC3**
+| Steps | Description |
+| ----------- | ----------- |
+| Main success scenario |  |
+| 1    | U: selects deleteEntry |
+| 2    | S: prompts user for type and ID |
+| 3    | U: enters type and ID |
+| 4    | S: deletes entry and confirms |
+| Extensions |  |
+| 3a   | U: enters invalid type or ID |
+|      | S: displays error for invalid ID or type |
+
+**UC4**
+| Steps | Description |
+| ----------- | ----------- |
+| Main success scenario |  |
+| 1    | U: selects view balance |
+| 2    | S: obtains total incoe=me and expenses |
+| 3    | S: calculates and displays net balance |
+
+**UC5**
+| Steps | Description |
+| ----------- | ----------- |
+| Main success scenario |  |
+| 1    | U: selects view entry by category |
+| 2    | S: prompts user for type and category |
+| 3    | U: enters type and category |
+| 4    | S: validates and searches for entry |
+| 5    | S: displays entry |
+| Extensions |  |
+| 3a   | U: enters invalid type or category |
+|      | S: displays error message |
+| 5a   | S: no entries found |
+|      | S: displays "no entries found" |
 

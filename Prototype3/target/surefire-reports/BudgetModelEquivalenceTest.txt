@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: IntegrationTest
+Test set: BudgetModelEquivalenceTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.287 s -- in IntegrationTest
+Tests run: 11, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 10.40 s -- in BudgetModelEquivalenceTest

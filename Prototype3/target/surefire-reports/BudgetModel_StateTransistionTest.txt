@@ -1,4 +1,4 @@
 -------------------------------------------------------------------------------
-Test set: IntegrationTest
+Test set: BudgetModel_StateTransistionTest
 -------------------------------------------------------------------------------
-Tests run: 3, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 4.287 s -- in IntegrationTest
+Tests run: 5, Failures: 0, Errors: 0, Skipped: 0, Time elapsed: 6.186 s -- in BudgetModel_StateTransistionTest

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetViewTest" time="2.37" tests="5" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetViewTest" time="2.212" tests="5" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -16,7 +16,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="CA"/>
     <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-21\bin"/>
-    <property name="sun.java.command" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire3748774673974814227\surefirebooter-20250719204847996_3.jar C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire3748774673974814227 2025-07-19T20-48-47_746-jvmRun1 surefire-20250719204847996_1tmp surefire_0-20250719204847996_2tmp"/>
+    <property name="sun.java.command" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire14224403580037393650\surefirebooter-20250727010918305_3.jar C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire14224403580037393650 2025-07-27T01-09-18_140-jvmRun1 surefire-20250727010918305_1tmp surefire_0-20250727010918305_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="C:\Users\TOLANI OKE-STEVE\Downloads\p375test\Ense-375\Prototype3\target\test-classes;C:\Users\TOLANI OKE-STEVE\Downloads\p375test\Ense-375\Prototype3\target\classes;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter\5.10.0\junit-jupiter-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.10.0\junit-jupiter-api-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\platform\junit-platform-commons\1.10.0\junit-platform-commons-1.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.10.0\junit-jupiter-params-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.10.0\junit-jupiter-engine-5.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\junit\platform\junit-platform-engine\1.10.0\junit-platform-engine-1.10.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\org\xerial\sqlite-jdbc\3.42.0.0\sqlite-jdbc-3.42.0.0.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\com\mysql\mysql-connector-j\8.0.33\mysql-connector-j-8.0.33.jar;C:\Users\TOLANI OKE-STEVE\.m2\repository\com\google\protobuf\protobuf-java\3.21.9\protobuf-java-3.21.9.jar;"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -32,7 +32,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
-    <property name="surefire.real.class.path" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire3748774673974814227\surefirebooter-20250719204847996_3.jar"/>
+    <property name="surefire.real.class.path" value="C:\Users\TOLANI OKE-STEVE\AppData\Local\Temp\surefire14224403580037393650\surefirebooter-20250727010918305_3.jar"/>
     <property name="user.script" value=""/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.6+8-LTS-188"/>
@@ -61,20 +61,20 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testDisplayEntries" classname="BudgetViewTest" time="1.256">
+  <testcase name="testDisplayEntries" classname="BudgetViewTest" time="1.188">
     <system-out><![CDATA[ Connected successfully to university DB!
 
 === Financial Entries ===
-ID: 329 | [income] salary: 3000.00
-ID: 274 | [expense] rent: 1000.00
+ID: 441 | [income] salary: 3000.00
+ID: 352 | [expense] rent: 1000.00
 ]]></system-out>
   </testcase>
-  <testcase name="testDisplayBalance" classname="BudgetViewTest" time="1.088">
+  <testcase name="testDisplayBalance" classname="BudgetViewTest" time="1.011">
     <system-out><![CDATA[ Connected successfully to university DB!
 Total Balance: 200.00
 ]]></system-out>
   </testcase>
-  <testcase name="testDisplayBalanceOutput" classname="BudgetViewTest" time="0.002"/>
-  <testcase name="testDisplay" classname="BudgetViewTest" time="0.006"/>
-  <testcase name="testDisplayMessage" classname="BudgetViewTest" time="0.001"/>
+  <testcase name="testDisplayBalanceOutput" classname="BudgetViewTest" time="0.001"/>
+  <testcase name="testDisplay" classname="BudgetViewTest" time="0.007"/>
+  <testcase name="testDisplayMessage" classname="BudgetViewTest" time="0.002"/>
 </testsuite>

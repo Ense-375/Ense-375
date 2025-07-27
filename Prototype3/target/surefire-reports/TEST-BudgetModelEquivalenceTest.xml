@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetModelTest" time="9.301" tests="7" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="BudgetModelEquivalenceTest" time="10.398" tests="11" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.cpu.isalist" value="amd64"/>
@@ -61,36 +61,60 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testGetEntriesByTypeAndCategory" classname="BudgetModelTest" time="1.467">
+  <testcase name="testCase1" classname="BudgetModelEquivalenceTest" time="1.012">
     <system-out><![CDATA[ Connected successfully to university DB!
+case 1: valid case income
 ]]></system-out>
   </testcase>
-  <testcase name="testDeleteEntry" classname="BudgetModelTest" time="2.252">
+  <testcase name="testCase2" classname="BudgetModelEquivalenceTest" time="0.808">
     <system-out><![CDATA[ Connected successfully to university DB!
-ID: 430, Type: income, Category: income
-ID: 337, Type: expense, Category: rent
+case 2: invalid case income
 ]]></system-out>
   </testcase>
-  <testcase name="testGetCategories" classname="BudgetModelTest" time="0.731">
+  <testcase name="testCase3" classname="BudgetModelEquivalenceTest" time="0.974">
     <system-out><![CDATA[ Connected successfully to university DB!
+case 3: valid case income
 ]]></system-out>
   </testcase>
-  <testcase name="testGetEntriesByCategory" classname="BudgetModelTest" time="1.383">
+  <testcase name="testCase4" classname="BudgetModelEquivalenceTest" time="1.114">
     <system-out><![CDATA[ Connected successfully to university DB!
+case 4: valid case expense
 ]]></system-out>
   </testcase>
-  <testcase name="testAddFinancialEntry" classname="BudgetModelTest" time="1.045">
+  <testcase name="testCase5" classname="BudgetModelEquivalenceTest" time="0.901">
     <system-out><![CDATA[ Connected successfully to university DB!
-Invalid category: invalidCategory
+case 5: invalid type/category case
 ]]></system-out>
   </testcase>
-  <testcase name="testGetCashFlow" classname="BudgetModelTest" time="1.701">
+  <testcase name="testCase6" classname="BudgetModelEquivalenceTest" time="0.941">
     <system-out><![CDATA[ Connected successfully to university DB!
+case 6: invalid case
 ]]></system-out>
   </testcase>
-  <testcase name="testCloseDatabaseConnection" classname="BudgetModelTest" time="0.717">
+  <testcase name="testCase7" classname="BudgetModelEquivalenceTest" time="0.873">
     <system-out><![CDATA[ Connected successfully to university DB!
-Database connection closed.
+case 7: invalid amount case (0)
+]]></system-out>
+  </testcase>
+  <testcase name="testCase8" classname="BudgetModelEquivalenceTest" time="1.034">
+    <system-out><![CDATA[ Connected successfully to university DB!
+case 8: invalid amount case (-50.0)
+]]></system-out>
+  </testcase>
+  <testcase name="testCase9" classname="BudgetModelEquivalenceTest" time="0.905">
+    <system-out><![CDATA[ Connected successfully to university DB!
+case 9: invalid category/source case
+Invalid category: 98
+]]></system-out>
+  </testcase>
+  <testcase name="testCase10" classname="BudgetModelEquivalenceTest" time="0.929">
+    <system-out><![CDATA[ Connected successfully to university DB!
+case 10: valid amount case
+]]></system-out>
+  </testcase>
+  <testcase name="testCase11" classname="BudgetModelEquivalenceTest" time="0.902">
+    <system-out><![CDATA[ Connected successfully to university DB!
+case 11: valid case
 ]]></system-out>
   </testcase>
 </testsuite>
