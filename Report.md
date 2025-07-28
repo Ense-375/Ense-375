@@ -348,11 +348,9 @@ Key features include:
  - Reliable database connectivity through a dedicated DatabaseConnector class.
  All features were tested to ensure reliability of each component.
 
-
  Future Work:
-
- Despite numerous successes, some limitations to the applicatiion still need to be implemented.
- Console-based UI, adding user login system and dynamic categories.
+ - Despite numerous successes, some limitations to the applicatiion still need to be implemented.
+ - Console-based UI, adding user login system and dynamic categories.
 ---
 
 ## References
