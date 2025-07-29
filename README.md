@@ -13,8 +13,7 @@ This repository consists of project files related to development of the Personal
 - [Problem Definition](https://github.com/Ense-375/Ense-375/blob/main/Report.md#problem-definition)
 - [Testing](https://github.com/Ense-375/Ense-375/blob/main/TESTING.md)
 - [Report](https://github.com/Ense-375/Ense-375/blob/main/Report.md)
-- [Presentation] (https://youtu.be/gOHplKgB540)
-Check out the presentation video of the project below:
+- Check out the presentation video of the project below:
 [Watch on YouTube](https://youtu.be/gOHplKgB540)
 [![Watch the video](https://img.youtube.com/vi/gOHplKgB540/hqdefault.jpg)](https://youtu.be/gOHplKgB540)
 
