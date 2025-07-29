@@ -236,10 +236,18 @@ Why this was chosen:
 ## Final Solution 
 ![UML Diagram:](./Documents/ProjectPlanning/Prototypes/FSLN.png)
 
+#### Solution Comparison Table
+
+| **Feature**           | **Prototype 1**              | **Prototype 2**                  | **Final Solution**              |
+|-----------------------|------------------------------|----------------------------------|---------------------------------|
+| **Entry Handling**     | Basic                        | With filters                     | With filters + persistence      |
+| **Data Storage**       | In-memory                    | File/CSV                         | MySQL via JDBC                  |
+| **Visualization**      | Console-based                | Basic (text charts)              | Console, expandable to GUI      |
+| **Architecture**       | Basic MVC                    | Improved MVC                     | Full modular MVC                |
+| **Testing Support**    | Unit + BVA + ECT             | Integration + Path               | Full suite of testing           |
+| **Scalability**        | Low                          | Moderate                         | High                            |
 
 
-
-#### Components
 ## Components
 | Component           | Role / Responsibility                       | Testing Methodology              |
 | ------------------- | ------------------------------------------- | -------------------------------- |
