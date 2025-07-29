@@ -32,7 +32,8 @@
    - [Meeting 1](#meeting-1)  
    - [Meeting 2](#meeting-2)  
    - [Meeting 3](#meeting-3)  
-   - [Meeting 4](#meeting-4)  
+   - [Meeting 4](#meeting-4) 
+   - [Meeting 5](#meeting-5) 
 5. [Project Management](#project-management)  
 6. [Conclusion and Future Work](#conclusion-and-future-work)  
 7. [References](#references)  
@@ -52,6 +53,7 @@
 3.[Meeting 2 Table](#meeting-2-table)
 4.[Meeting 3 Table](#meeting-3-table)
 5.[Meeting 4 Table](#meeting-4-table)
+6.[Meeting 5 Table](#meeting-5-table)
 
 ---
 
@@ -312,34 +314,47 @@ Safety:
 | Grant    | Write Introduction        | Completed             | Write Objectives for the project        |
 
 ### Meeting 3
-**Time:** Month Date, Year, Start–End  
-**Agenda:** Review of Individual Progress
+**Time:** May 22, 2025, 2:30pm - 3:10pm  
+**Agenda:** Delegation of tasks
 
 ## Meeting 3 Table
 
 | Team Member      | Previous Task | Completion State | Next Task     |
 |------------------|---------------|------------------|---------------|
-| Team member 1    | Task 1        | 80%              | Task 1, Task 5|
-| Team member 2    | Task 2        | 50%              | Task 2        |
-| Team member 3    | Task 3        | 100%             | Task 6        |
+| Tolani    | Write Functional and Non-functional requirements        | Completed              | Test Prototypes|
+| Dmytro    | Write Constraints for the project       | Completed              | Create Prototypes        |
+| Grant    | Write Objectives for the project        | Completed             | Document Prototypes        |
 
 
 ### Meeting 4
-**Time:** Month Date, Year, Start–End  
+**Time:** July 28, 2025, 5:00pm - 6:15pm  
 **Agenda:** Review of Individual Progress
 
 ## Meeting 4 Table
 
 | Team Member      | Previous Task | Completion State | Next Task     |
 |------------------|---------------|------------------|---------------|
-| Team member 1    | Task 1        | 80%              | Task 1, Task 5|
-| Team member 2    | Task 2        | 50%              | Task 2        |
-| Team member 3    | Task 3        | 100%             | Task 6        |
+| Tolani    | Test Prototypes        | Completed              | Help create presentation|
+| Dmytro    | Create Prototypes        | Completed             | Help create presentation        |
+| Grant    | Document Prototypes        | Completed           | Help create presentation        |
+
+### Meeting 5
+**Time:** July 28, 2025, 5:00pm - 6:15pm  
+**Agenda:** Create Presentation
+
+## Meeting 5 Table
+
+| Team Member      | Previous Task | Completion State | Next Task     |
+|------------------|---------------|------------------|---------------|
+| Tolani    | Help create presentation        | Completed            | Project is Finished|
+| Dmytro    | Help create presentation        | Completed              | Project is Finished       |
+| Grant    | Help create presentation        | Completed             | Project is Finished        |
 
 
 ---
 
 ## Project Management
+Below is a Gantt chart showing how we managed our tasks and responsibilities.
 
 ## Gantt Chart
 ![Gantt Chart:](./Documents/ProjectPlanning/ganttCH.jpg)
