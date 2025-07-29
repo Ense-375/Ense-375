@@ -340,8 +340,9 @@ Safety:
 ---
 
 ## Project Management
+
 ## Gantt Chart
-![Gantt Chart:](./Documents/ProjectPlanning/ganttCH.png)
+![Gantt Chart:](./Documents/ProjectPlanning/ganttCH.jpg)
 
 
 ---
