@@ -333,7 +333,7 @@ Safety:
 
 ## Project Management
 ## Gantt Chart
-![Gantt Chart:](./Documents/ProjectPlanning/gantt_chart.png)
+![Gantt Chart:](./Documents/ProjectPlanning/ganttCH.png)
 
 
 ---
@@ -351,16 +351,3 @@ Key features include:
  Future Work:
  - Despite numerous successes, some limitations to the applicatiion still need to be implemented.
  - Console-based UI, adding user login system and dynamic categories.
----
-
-## References
-
-
-
----
-
-## Appendix
-
-
-
----
