@@ -46,14 +46,15 @@
 2. [Prototype 2](#prototype-2)
 3. [Final Solution](#final-solution)
 4. [Gantt Chart](#gantt-chart)
+--- 
 
 ## List of Tables
-1.[Components](#components)
-2.[Meeting 1 Table](#meeting-1-table)
-3.[Meeting 2 Table](#meeting-2-table)
-4.[Meeting 3 Table](#meeting-3-table)
-5.[Meeting 4 Table](#meeting-4-table)
-6.[Meeting 5 Table](#meeting-5-table)
+1. [Components](#components)
+2. [Meeting 1 Table](#meeting-1-table)
+3. [Meeting 2 Table](#meeting-2-table)
+4. [Meeting 3 Table](#meeting-3-table)
+5. [Meeting 4 Table](#meeting-4-table)
+6. [Meeting 5 Table](#meeting-5-table)
 
 ---
 
